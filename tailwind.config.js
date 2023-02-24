@@ -9,7 +9,7 @@ module.exports = {
     fontFamily: {
       inter: ["Inter", "sans-serif"],
       acumin: ["Acumin", "sans-serif"],
-      barlow: ["Barlow", "sans-serif"],
+      barlow: ["Kudryashev", "sans-serif"],
       mono: ["monospace"],
     },
     extend: {
@@ -47,6 +47,6 @@ module.exports = {
     require("@tailwindcss/line-clamp"),
     require("@tailwindcss/typography"),
     require("tailwind-scrollbar-hide"),
-    require('prettier-plugin-tailwindcss')
+    require("prettier-plugin-tailwindcss"),
   ],
 };
