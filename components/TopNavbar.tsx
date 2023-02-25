@@ -87,9 +87,9 @@ function NavItem({ href, text }: { href: string; text: string }) {
     return (
         <Link
             className={`${isActive
-                ? "font-bold text-gray-800 dark:text-gray-100"
-                : " text-gray-600 dark:text-gray-300"
-                } sm:inline-block transition-all text-[17px] hidden px-2 md:px-3 py-[3px] hover:bg-black/10  dark:hover:bg-neutral-700/50 rounded-md`}
+                ? "font-bold text-gray-800"
+                : " text-gray-600 "
+                } sm:inline-block transition-all text-[17px] hidden px-2 md:px-3 py-[3px] hover:bg-black/10  rounded-md`}
             href={href === "/home" ? "/" : href}
         >
             <motion.p className="capitalize" variants={popUp}>
@@ -163,7 +163,7 @@ const MobileMenu = ({
 }) => {
     return (
         <motion.div
-            className="absolute top-0 left-0 z-10 w-screen h-screen font-normal bg-white dark:bg-darkPrimary sm:hidden"
+            className="absolute top-0 left-0 z-10 w-screen h-screen font-normal bg-white sm:hidden"
             variants={hamFastFadeContainer}
             initial="hidden"
             animate="visible"
@@ -178,7 +178,7 @@ const MobileMenu = ({
                             href={navlink}
                             key={`mobileNav-${index}`}
                             onClick={handleClick}
-                            className="flex w-auto py-4 text-base font-semibold text-gray-900 capitalize border-b border-gray-300 cursor-pointer dark:border-gray-700 dark:text-gray-100"
+                            className="flex w-auto py-4 text-base font-semibold text-gray-900 capitalize border-b border-gray-300 cursor-pointer "
                         >
                             <motion.p variants={mobileNavItemSideways}>
                                 {link === "rss" ? link.toUpperCase() : link}

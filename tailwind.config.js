@@ -13,12 +13,12 @@ module.exports = {
       mono: ["monospace"],
     },
     extend: {
-      colors: {
+      /*   colors: {
         darkPrimary: "#181A1B",
         darkSecondary: "#25282A",
         darkWhite: "#f2f5fa",
         "dark-3": "#b8b8b8",
-      },
+      }, */
       listStyleType: {
         square: "square",
         roman: "upper-roman",
