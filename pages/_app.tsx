@@ -2,7 +2,6 @@ import "@styles/globals.css";
 import Layout from "@layout/Layout";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import "nprogress/nprogress.css";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { AppProps } from "next/app";
 

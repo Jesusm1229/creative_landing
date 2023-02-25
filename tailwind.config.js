@@ -9,7 +9,8 @@ module.exports = {
     fontFamily: {
       inter: ["Inter", "sans-serif"],
       acumin: ["Acumin", "sans-serif"],
-      barlow: ["Kudryashev", "sans-serif"],
+      kudryashev: ["Kudryashev", "sans-serif"],
+      barlow: ["Barlow", "sans-serif"],
       mono: ["monospace"],
     },
     extend: {
