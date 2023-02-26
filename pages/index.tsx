@@ -43,7 +43,7 @@ export default function Home() {
                             <div className="flex flex-col gap-1">
                                 <motion.h1
                                     variants={opacityVariant}
-                                    className="text-5xl font-bold lg:text-6xl font-sarina"
+                                    className="text-5xl font-bold  lg:text-6xl font-acumin"
                                 >
                                     Jatin Sharma
                                 </motion.h1>
@@ -64,7 +64,7 @@ export default function Home() {
                             </motion.p>
                         </div>
 
-                        <Link
+                        {/*     <Link
                             href="https://bit.ly/j471nCV"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -72,7 +72,7 @@ export default function Home() {
                         >
                             <FiDownload />
                             <p>Resume</p>
-                        </Link>
+                        </Link> */}
                     </div>
                 </motion.section>
 

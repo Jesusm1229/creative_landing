@@ -47,28 +47,28 @@
 @font-face {
   font-family: "Acumin";
   font-style: normal;
-  font-weight: 100 900;
+  font-weight: normal;
   font-display: swap;
   src: url(/fonts/Acumin/Acumin-RPro.woff2) format("woff2");
 }
 @font-face {
   font-family: "Acumin";
-  font-style: normal;
-  font-weight: 100 900;
+  font-style: italic;
+  font-weight: 900;
   font-display: swap;
   src: url(/fonts/Acumin/Acumin-BdItPro.woff2) format("woff2");
 }
 @font-face {
   font-family: "Acumin";
-  font-style: normal;
-  font-weight: 100 900;
+  font-style: bold;
+  font-weight: 900;
   font-display: swap;
   src: url(/fonts/Acumin/Acumin-BdPro.woff2) format("woff2");
 }
 @font-face {
   font-family: "Acumin";
-  font-style: normal;
-  font-weight: 100 900;
+  font-style: italic;
+  font-weight: normal;
   font-display: swap;
   src: url(/fonts/Acumin/Acumin-ItPro.woff2) format("woff2");
 }
@@ -78,27 +78,6 @@
   font-weight: 100 900;
   font-display: swap;
   src: url(/fonts/Kudryashev/fontspring-demo-kdp45.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Kudryashev";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/fonts/Kudryashev/fontspring-demo-kdps45.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Kudryashev";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/fonts/Kudryashev/fontspring-demo-khl45.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Kudryashev";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/fonts/Kudryashev/fontspring-demo-khs45.woff2) format("woff2");
 }
 
 body,
