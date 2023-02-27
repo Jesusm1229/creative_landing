@@ -80,6 +80,24 @@
   src: url(/fonts/Kudryashev/fontspring-demo-kdp45.woff2) format("woff2");
 }
 
+:root {
+  --color-text: #000;
+  --color-bg: hsl(22deg 25% 73%);
+  --color-text-alt: hsl(1deg 69% 50%);
+  --color-link: #000;
+  --color-link-hover: #000;
+  /* Column/item variables */
+  --ratio: 1.3; /* image ratio */
+  --grid-item-width: 32vw; /* image width */
+  --justify: space-between; /* spread columns or center */
+  --gap: 2.5vw; /* column gap and margin for items */
+  --rotation: 0deg; /* section rotation */
+  --radius: 0px; /* image border radius */
+  --offset: -30vh; /* offset of even columns */
+  /* content section */
+  --radius-small: 4px; /* border radius of small images */
+}
+
 body,
 html {
   overflow-x: hidden;
@@ -113,7 +131,6 @@ body.dark {
 ::-webkit-scrollbar {
   width: 6px;
 }
-
 ::-webkit-scrollbar-track {
   background: transparent;
 }
@@ -141,6 +158,11 @@ body.dark {
 /* For preventing the blue highlight color box on tap(click) */
 * {
   -webkit-tap-highlight-color: transparent;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 .auto-row {
@@ -212,6 +234,7 @@ code > .line::before {
   flex-direction: column;
 }
 
+/*SÓLO MDX*/
 /* Layers Components or the custom class extends with tailwind */
 @layer components {
   .bottom_nav_icon {
@@ -274,11 +297,23 @@ code > .line::before {
   .blog-container {
     @apply my-5 !w-full font-medium dark:text-neutral-400;
   }
+  .section {
+    @apply static top-0 z-[4] min-h-screen w-full bg-[color:var(--color-bg)] leading-none;
+  }
+
+  .section__title {
+    -moz-font-feature-settings: "swsh";
+    -webkit-font-feature-settings: "swsh";
+    font-feature-settings: "swsh";
+  }
 }
 
 @layer base {
   body {
-    @apply bg-darkWhite font-inter;
+    @apply m-0 bg-[color:var(--color-bg)] text-[color:var(--color-text)];
+    font-family: acumin-pro, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   button {
     @apply outline-none;
