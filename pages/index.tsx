@@ -13,6 +13,7 @@ import { FiDownload } from "react-icons/fi";
 import pageMeta from "@content/meta";
 import React from "react";
 import Link from "next/link";
+import ProjectSection from "@components/Home/ProjectSection";
 
 export default function Home() {
 
@@ -25,13 +26,13 @@ export default function Home() {
                 previewImage={pageMeta.home.image}
                 keywords={pageMeta.home.keywords}
             />
-            <div className="relative max-w-4xl mx-auto dark:bg-darkPrimary dark:text-gray-100 2xl:max-w-5xl 3xl:max-w-7xl">
+            <div className="relative w-screen mx-auto dark:bg-darkPrimary dark:text-gray-100 ">
                 <motion.section
                     initial="hidden"
                     whileInView="visible"
                     variants={FadeContainer}
                     viewport={{ once: true }}
-                    className="section grid min-h-screen py-20 place-content-center"
+                    className="section z-4 grid min-h-screen py-20 place-content-center"
                 >
                     <div className="relative flex flex-col items-center w-full gap-10 mx-auto">
 
@@ -72,10 +73,33 @@ export default function Home() {
                     </div>
                 </motion.section>
 
-                <div>
 
+                <div className="pt-[1290px]">
+                    <ProjectSection />
                 </div>
             </div>
+            <section className="absolute inset-0 w-screen -z-10 h-fit  columns-2 md:columns-3 lg:columns-4">
+                <img className="mb-4" src="https://source.unsplash.com/random/1" />
+                <img className="mb-4" src="https://source.unsplash.com/random/2" />
+                <img className="mb-4" src="https://source.unsplash.com/random/3" />
+                <img className="mb-4" src="https://source.unsplash.com/random/4" />
+                <img className="mb-4" src="https://source.unsplash.com/random/5" />
+                <img className="mb-4" src="https://source.unsplash.com/random/6" />
+                <img className="mb-4" src="https://source.unsplash.com/random/7" />
+                <img className="mb-4" src="https://source.unsplash.com/random/8" />
+                <img className="mb-4" src="https://source.unsplash.com/random/10" />
+                <img className="mb-4" src="https://source.unsplash.com/random/11" />
+                <img className="mb-4" src="https://source.unsplash.com/random/12" />
+                <img className="mb-4" src="https://source.unsplash.com/random/13" />
+                <img className="mb-4" src="https://source.unsplash.com/random/14" />
+                <img className="mb-4" src="https://source.unsplash.com/random/15" />
+                <img className="mb-4" src="https://source.unsplash.com/random/16" />
+                <img className="mb-4" src="https://source.unsplash.com/random/17" />
+                <img className="mb-4" src="https://source.unsplash.com/random/18" />
+                <img className="mb-4" src="https://source.unsplash.com/random/19" />
+                <img className="mb-4" src="https://source.unsplash.com/random/20" />
+            </section>
+
         </>
     );
 }
