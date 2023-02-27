@@ -71,3 +71,12 @@ export type PageData = {
 export type PageMeta = {
   home: PageData;
 };
+
+export type FrontMatter = {
+  slug: string;  
+  excerpt: string;
+  title: string;
+  date: string;
+  keywords: string;
+  image: string;
+};

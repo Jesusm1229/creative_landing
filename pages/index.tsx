@@ -8,14 +8,15 @@ import {
     popUp,
 } from "@content/FramerMotionVariants";
 import { motion } from "framer-motion";
-import { FiDownload } from "react-icons/fi";
-
 import pageMeta from "@content/meta";
 import React from "react";
 import Link from "next/link";
 import ProjectSection from "@components/Home/ProjectSection";
+import AnimatedHeading from "@components/FramerMotion/AnimatedHeading";
+import AnimatedText from "@components/FramerMotion/AnimatedText";
+import { FrontMatter } from "@lib/types";
 
-export default function Home() {
+export default function Home({ projects }: { projects: FrontMatter[] }) {
 
 
     return (
@@ -73,35 +74,58 @@ export default function Home() {
                     </div>
                 </motion.section>
 
-
+                <section className="absolute inset-0 w-full -z-10 h-fit  columns-2 md:columns-3 lg:columns-4 mx-auto">
+                    <img className="mb-4" src="https://source.unsplash.com/random/1" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/2" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/3" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/4" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/5" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/6" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/7" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/8" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/10" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/11" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/12" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/13" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/14" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/15" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/16" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/17" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/18" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/19" />
+                    <img className="mb-4" src="https://source.unsplash.com/random/20" />
+                </section>
                 <div className="pt-[1290px]">
-                    <ProjectSection />
+                    <ProjectSection projects={projects} />
                 </div>
             </div>
-            <section className="absolute inset-0 w-screen -z-10 h-fit  columns-2 md:columns-3 lg:columns-4">
-                <img className="mb-4" src="https://source.unsplash.com/random/1" />
-                <img className="mb-4" src="https://source.unsplash.com/random/2" />
-                <img className="mb-4" src="https://source.unsplash.com/random/3" />
-                <img className="mb-4" src="https://source.unsplash.com/random/4" />
-                <img className="mb-4" src="https://source.unsplash.com/random/5" />
-                <img className="mb-4" src="https://source.unsplash.com/random/6" />
-                <img className="mb-4" src="https://source.unsplash.com/random/7" />
-                <img className="mb-4" src="https://source.unsplash.com/random/8" />
-                <img className="mb-4" src="https://source.unsplash.com/random/10" />
-                <img className="mb-4" src="https://source.unsplash.com/random/11" />
-                <img className="mb-4" src="https://source.unsplash.com/random/12" />
-                <img className="mb-4" src="https://source.unsplash.com/random/13" />
-                <img className="mb-4" src="https://source.unsplash.com/random/14" />
-                <img className="mb-4" src="https://source.unsplash.com/random/15" />
-                <img className="mb-4" src="https://source.unsplash.com/random/16" />
-                <img className="mb-4" src="https://source.unsplash.com/random/17" />
-                <img className="mb-4" src="https://source.unsplash.com/random/18" />
-                <img className="mb-4" src="https://source.unsplash.com/random/19" />
-                <img className="mb-4" src="https://source.unsplash.com/random/20" />
-            </section>
+
 
         </>
     );
 }
 
-
+export function HomeHeading({ title }: { title: React.ReactNode | string }) {
+    return (
+        <div className="grid grid-cols-3 gap-4 place-items-center py-20" >
+            <AnimatedText
+                className="w-full text-2xl font-bold text-center font-kudryashev"
+                variants={popUp}
+            >
+                2000
+            </AnimatedText>
+            <AnimatedHeading
+                className="w-full text-8xl font-bold text-center font-kudryashev border-b-2 border-blue-800"
+                variants={popUp}
+            >
+                {title}
+            </AnimatedHeading>
+            <AnimatedText
+                className="w-full text-2xl font-bold text-center font-kudryashev"
+                variants={popUp}
+            >
+                2022
+            </AnimatedText>
+        </div>
+    );
+}

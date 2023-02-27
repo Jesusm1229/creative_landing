@@ -23,7 +23,7 @@ export default function Footer() {
                 whileInView="visible"
                 variants={FadeContainer}
                 viewport={{ once: true }}
-                className="flex flex-col max-w-4xl gap-5 p-5 mx-auto text-sm border-t-2 border-gray-200 2xl:max-w-5xl 3xl:max-w-7xl dark:border-gray-400/10 sm:text-base"
+                className="flex flex-col max-w-4xl gap-5 p-5 mx-auto text-sm border-t-2  2xl:max-w-5xl 3xl:max-w-7xl dark:border-gray-400/10 sm:text-base"
             >
                 <section className="grid grid-row-1 gap-2">
                     <div className="flex flex-row gap-4 capitalize">
