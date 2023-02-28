@@ -9,12 +9,15 @@ import {
 } from "@content/FramerMotionVariants";
 import { motion } from "framer-motion";
 import pageMeta from "@content/meta";
+import generateSitemap from "@lib/sitemap";
 import React from "react";
 import Link from "next/link";
 import ProjectSection from "@components/Home/ProjectSection";
 import AnimatedHeading from "@components/FramerMotion/AnimatedHeading";
 import AnimatedText from "@components/FramerMotion/AnimatedText";
 import { FrontMatter } from "@lib/types";
+import getRSS from "@lib/generateRSS";
+import MDXContent from "@lib/MDXContent";
 
 export default function Home({ projects }: { projects: FrontMatter[] }) {
 
@@ -129,3 +132,17 @@ export function HomeHeading({ title }: { title: React.ReactNode | string }) {
         </div>
     );
 }
+
+export async function getStaticProps() {
+    const blogs = new MDXContent("posts").getAllPosts(3);
+    await getRSS();
+    await generateSitemap();
+
+    return {
+        props: { blogs },
+    };
+}
+
+
+
+
