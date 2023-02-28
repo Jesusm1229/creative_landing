@@ -16,36 +16,34 @@ export default function Project({
     const projectRef = useRef(null);
     return (
         <motion.article
-            ref={projectRef}
             variants={BlogCardAnimation}
-            initial={animate && "hidden"}
-            whileInView={animate ? "visible" : ""}
             viewport={{ once: true }}
-            className="bg-white dark:bg-darkSecondary rounded-2xl p-2 flex flex-col sm:flex-row items-center w-ull sm:w-[95%] mx-auto gap-2 md:gap-7 shadow-md md:shadow-lg"
+            className="relative col-span-2 bg-white p-2 flex flex-col  items-center justify-center w-full sm:w-[95%] mx-auto gap-2 md:gap-7 shadow-md md:shadow-lg"
         >
-            <div className="w-full h-full">
-                <img className="w-full h-full mb-4" src="https://source.unsplash.com/random/1" />
-                {/*  <Image
-                    title={project.title}
-                    alt={project.title}
-                    src={project.image}
-                    width={1200}
-                    height={630}
-                    blurDataURL={project.image}
-                    quality={75}
-                    className="my-auto transition-all duration-300 backdrop-blur-xl rounded-xl"
-                /> */}
+            <div className="relative inset-0 w-full h-full">
+                <img className="inset-0 m-auto max-w-full w-full h-auto  mb-4 object-cover object-center" src="https://source.unsplash.com/random/1" />
+
+                {/* <Image
+                title={project.title}
+                alt={project.title}
+                src={project.image}
+                width={1200}
+                height={630}
+                blurDataURL={project.image}
+                quality={75}
+                className="my-auto transition-all duration-300 backdrop-blur-xl rounded-xl"
+            /> */}
             </div>
 
-            <div className="flex flex-col w-full h-full px-2 pb-2 mt-2 sm:mt-0 sm:p-1 lg:py-5 md:pr-5">
+            <div className="absolute flex flex-col w-full h-full px-2 pb-2 mt-2 sm:mt-0 sm:p-1 lg:py-5 md:pr-5 items-center justify-center text-center">
                 <Link
-                    href={`/projects/${project.slug}`}
-                    className="font-bold text-neutral-900 md:text-xl dark:text-neutral-200 hover:underline"
+                    href={`/projects/`}
+                    className="rounded-full bg-black px-12 py-6 font-bold text-neutral-100 md:text-xl dark:text-neutral-200 hover:underline"
                 >
-                    {project.title}
+                    NAME
                 </Link>
-                <p className="mt-3 text-sm sm:text-xs md:text-sm  text-gray-600 dark:text-[#b5b7ba] line-clamp-3 sm:line-clamp-2 md:line-clamp-4 mb-2">
-                    {project.excerpt}
+                <p className="mt-3 text-sm sm:text-xs md:text-sm  text-gray-100 dark:text-[#b5b7ba] line-clamp-3 sm:line-clamp-2 md:line-clamp-4 mb-2">
+                    FECHA
                 </p>
 
                 <div className="flex items-center justify-between mt-auto">
@@ -54,7 +52,7 @@ export default function Project({
                         </div>
                         <div className="flex flex-col">
                             <span className="text-xs">
-                                {getFormattedDate(new Date(project.date))}
+                                TAGS TAGS TAGS TAGS TAGS TAGS TAGS TAGS TAGS
                             </span>
                         </div>
                     </div>
