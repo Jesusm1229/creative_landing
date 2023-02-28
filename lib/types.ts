@@ -1,6 +1,7 @@
 import { Variants } from "framer-motion";
 import React from "react";
 import { IconType } from "react-icons/lib";
+import { ReadTimeResults } from "reading-time";
 
 /* Custom Animated Components types */
 export type AnimatedTAGProps = {
@@ -73,7 +74,8 @@ export type PageMeta = {
 };
 
 export type FrontMatter = {
-  slug: string;  
+  slug: string;
+  readingTime: ReadTimeResults;
   excerpt: string;
   title: string;
   date: string;
