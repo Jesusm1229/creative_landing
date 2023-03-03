@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { HomeHeading } from 'pages'
 import React from 'react'
 
-const project = [];
 //Here we bring all the 
 export default function BlogSection({ blogs }: { blogs: FrontMatter[] }) {
     return (
@@ -17,8 +16,9 @@ export default function BlogSection({ blogs }: { blogs: FrontMatter[] }) {
                 {/* Here start the project section */}
 
                 {blogs.map((blog, index) => {
-                    return <Blog key={`home-project-${index}`} blog={blog} animate />;
+                    return <Blog key={`home-blog-${index}`} blog={blog} animate />;
                 })}
+
 
             </div>
 

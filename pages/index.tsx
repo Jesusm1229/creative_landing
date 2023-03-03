@@ -12,14 +12,15 @@ import pageMeta from "@content/meta";
 import generateSitemap from "@lib/sitemap";
 import React from "react";
 import Link from "next/link";
-import ProjectSection from "@components/Home/BlogSection";
+
 import AnimatedHeading from "@components/FramerMotion/AnimatedHeading";
 import AnimatedText from "@components/FramerMotion/AnimatedText";
 import { FrontMatter } from "@lib/types";
 import getRSS from "@lib/generateRSS";
 import MDXContent from "@lib/MDXContent";
+import BlogSection from "@components/Home/BlogSection";
 
-export default function Home({ projects }: { projects: FrontMatter[] }) {
+export default function Home({ blogs }: { blogs: FrontMatter[] }) {
 
 
     return (
@@ -99,7 +100,7 @@ export default function Home({ projects }: { projects: FrontMatter[] }) {
                     <img className="mb-4" src="https://source.unsplash.com/random/20" />
                 </section>
                 <div className="pt-[1290px]">
-                    <ProjectSection projects={projects} />
+                    <BlogSection blogs={blogs} />
                 </div>
             </div>
 

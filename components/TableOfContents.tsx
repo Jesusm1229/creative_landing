@@ -47,8 +47,8 @@ export default function TableOfContents({
         <>
           <div
             className={`fixed h-full print:hidden ${isTOCActive
-                ? "left-0 opacity-100 top-[44px] md:top-[60px]"
-                : "-left-full opacity-0"
+              ? "left-0 opacity-100 top-[44px] md:top-[60px]"
+              : "-left-full opacity-0"
               } ${scrollPercentage > 95 ? "xl:-left-full" : "xl:left-0"
               } md:left-0 md:opacity-100 md:max-w-[35%] lg:max-w-[30%]  transition-all duration-500 flex flex-col gap-1 !pb-[100px] overflow-y-scroll p-10 md:p-14 h-screen fixed w-full font-barlow bg-darkWhite dark:bg-darkPrimary text-neutral-800 dark:text-gray-200 z-50 `}
           >

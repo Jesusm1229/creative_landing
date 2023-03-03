@@ -54,7 +54,7 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
             />
 
             <section className="pageTop flex flex-col gap-2">
-                {/*     <PageTop pageTitle="Blogs">
+                {/*   <PageTop pageTitle="Blogs">
           I've been writing online since 2021, mostly about web development and
           tech careers. In total, I've written {blogs.length} articles till now.
         </PageTop> */}
