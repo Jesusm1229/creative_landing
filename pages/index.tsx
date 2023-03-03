@@ -12,7 +12,7 @@ import pageMeta from "@content/meta";
 import generateSitemap from "@lib/sitemap";
 import React from "react";
 import Link from "next/link";
-import ProjectSection from "@components/Home/ProjectSection";
+import ProjectSection from "@components/Home/BlogSection";
 import AnimatedHeading from "@components/FramerMotion/AnimatedHeading";
 import AnimatedText from "@components/FramerMotion/AnimatedText";
 import { FrontMatter } from "@lib/types";
