@@ -59,6 +59,7 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
           tech careers. In total, I've written {blogs.length} articles till now.
         </PageTop> */}
 
+
                 <AnimatedDiv
                     className="relative group w-0 mx-auto text-slate-400 dark:text-gray-300 bg-white dark:bg-darkSecondary rounded-md"
                     variants={searchBarSlideAnimation}
@@ -140,6 +141,7 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
 
 export async function getStaticProps() {
     const blogs = new MDXContent("posts").getAllPosts();
+
     return {
         props: { blogs },
     };

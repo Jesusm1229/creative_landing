@@ -147,15 +147,8 @@ export type PageData = {
 
 export type PageMeta = {
   home: PageData;
-  stats: PageData;
-  utilities: PageData;
   blogs: PageData;
   bookmark: PageData;
-  certificates: PageData;
-  projects: PageData;
-  about: PageData;
-  privacy: PageData;
-  snippets: PageData;
 };
 
 export type Snippet = {

@@ -16,14 +16,14 @@ export default function Post({
   error: boolean;
 }) {
   // Adding Views to the supabase database
-  useEffect(() => {
-    const registerView = () =>
-      fetch(`/api/views/${post.meta.slug}`, {
-        method: "POST",
-      });
-
-    post != null && registerView();
-  }, [post]);
+  /*  useEffect(() => {
+     const registerView = () =>
+       fetch(`/api/views/${post.meta.slug}`, {
+         method: "POST",
+       });
+ 
+     post != null && registerView();
+   }, [post]); */
 
   if (error) return <PageNotFound />;
 

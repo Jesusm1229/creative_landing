@@ -14,6 +14,12 @@ const pageMeta: PageMeta = {
     image: "https://imgur.com/nbNLLZk.png",
     keywords: "j471n blog, blog, webdev, react",
   },
+  bookmark: {
+    title: "Bookmarked Blogs",
+    description: "Bookmarked Blogs of Jatin Sharma's blogs by you",
+    image: "https://imgur.com/5XkrVPq.png",
+    keywords: "bookmark, blogs, ",
+  },
 };
 
 export default pageMeta;
