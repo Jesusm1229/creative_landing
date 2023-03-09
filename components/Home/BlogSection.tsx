@@ -20,6 +20,8 @@ export default function BlogSection({ blogs }: { blogs: FrontMatter[] }) {
                 })}
 
 
+
+
             </div>
 
 

@@ -1,11 +1,11 @@
 import { writeFileSync } from "fs";
 import MDXContent from "./MDXContent";
-/* import RSS from "rss"; */
 
 export default async function getRSS() {
   const siteURL = "DOMAIN";
   const allBlogs = new MDXContent("posts").getAllPosts();
-  /* 
+  var RSS = require("rss");
+
   // Create a new RSS object
   const feed = new RSS({
     title: "NAME",
@@ -29,5 +29,5 @@ export default async function getRSS() {
   });
 
   // Write the RSS feed to a file
-  writeFileSync("./public/feed.xml", feed.xml({ indent: true })); */
+  writeFileSync("./public/feed.xml", feed.xml({ indent: true }));
 }

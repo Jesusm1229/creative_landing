@@ -136,7 +136,7 @@ export function HomeHeading({ title }: { title: React.ReactNode | string }) {
 
 export async function getStaticProps() {
     const blogs = new MDXContent("posts").getAllPosts(3);
-    /* await getRSS(); */
+    await getRSS();
     await generateSitemap();
 
     return {
