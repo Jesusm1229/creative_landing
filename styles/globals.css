@@ -286,7 +286,7 @@ code > .line::before {
     @apply relative overflow-hidden before:absolute before:-right-10 before:top-4 before:-z-10 before:h-full before:w-40 before:rotate-[20deg] before:scale-y-150 before:bg-stone-900 before:opacity-10 before:duration-700 hover:before:scale-[7] dark:before:bg-gray-50 dark:before:opacity-5;
   }
   .pageTop {
-    @apply relative mx-auto mt-[44px] mb-10 max-w-4xl p-4 text-neutral-900 dark:text-neutral-200 md:mt-[60px] 2xl:max-w-5xl 3xl:max-w-7xl;
+    @apply relative mx-auto mt-[44px] mb-10 max-w-4xl p-4 text-neutral-900 dark:text-neutral-200 md:mt-[60px] 2xl:max-w-7xl 3xl:max-w-7xl;
   }
   .utilities-svg {
     @apply !pointer-events-none mb-4 h-8 w-8;

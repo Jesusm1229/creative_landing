@@ -1,8 +1,6 @@
-
 /**
  * @type {import('next').NextConfig}
  */
-
 
 module.exports = {
   reactStrictMode: true,
@@ -14,9 +12,9 @@ module.exports = {
       "imgur.com",
       "i.imgur.com",
       "cutt.ly",
-      "activity-graph.herokuapp.com",   
+      "activity-graph.herokuapp.com",
       "images.unsplash.com",
-      
+      "source.unsplash.com",
     ],
   },
   typescript: {

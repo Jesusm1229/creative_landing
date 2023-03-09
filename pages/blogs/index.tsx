@@ -84,7 +84,7 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
                     </button>
                 </AnimatedDiv> */}
 
-                <section className="relative py-5  flex flex-col gap-2 min-h-[50vh]">
+                <section className="relative py-5 w-full flex flex-col gap-2 min-h-[50vh]">
                     <AnimatePresence>
                         {filteredBlogs.length != 0 ? (
                             <>
@@ -122,8 +122,8 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
 
                                 <AnimatedDiv
                                     variants={FadeContainer}
-                                    className="grid grid-cols-1 gap-4 mx-auto"
-                                >
+                                    className="grid-flow-row-dense grid grid-cols-3 gap-2 my-10">
+
                                     {filteredBlogs.map((blog, index) => {
                                         return <Blog key={index} blog={blog} />;
                                     })}
