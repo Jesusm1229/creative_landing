@@ -44,6 +44,12 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
         return () => document.removeEventListener("keydown", handleAutoSearch);
     }, []);
 
+    //Adding margin to center column
+    function colSpan(index: number) {
+        const colspan = index % 3 === 1 ? "mt-10 -mb-10" : "";
+        return colspan;
+    }
+
     return (
         <>
             <Metadata
@@ -122,10 +128,10 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
 
                                 <AnimatedDiv
                                     variants={FadeContainer}
-                                    className="grid-flow-row-dense grid grid-cols-3 gap-2 my-10">
+                                    className=" grid grid-cols-3 gap-4 my-10">
 
                                     {filteredBlogs.map((blog, index) => {
-                                        return <Blog key={index} blog={blog} />;
+                                        return <Blog key={index} blog={blog} colSpan={colSpan(index)} />;
                                     })}
                                 </AnimatedDiv>
                             </>
@@ -142,7 +148,7 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
 }
 
 export async function getStaticProps() {
-    const blogs = new MDXContent("posts").getAllPosts();
+    const blogs = new MDXContent("posts").getAllPosts(8);
 
     return {
         props: { blogs },

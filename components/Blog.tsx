@@ -10,11 +10,15 @@ import { BlogCardAnimation } from "@content/FramerMotionVariants";
 export default function Blog({
     blog,
     animate = false,
+    colSpan,
 }: {
     blog: FrontMatter;
     animate?: boolean;
+    colSpan: string;
 }) {
     const blogRef = useRef(null);
+
+
     return (
         <motion.article
             ref={blogRef}
@@ -22,25 +26,25 @@ export default function Blog({
             initial={animate && "hidden"}
             whileInView={animate ? "visible" : ""}
             viewport={{ once: true }}
-            className="relative col-span-1 bg-white p-2 flex flex-col  items-center justify-center w-full h-full sm:w-[95%] mx-auto gap-2 md:gap-7 shadow-md md:shadow-lg"
+            className={`relative ${colSpan} items-stretch flex flex-col justify-center w-full  sm:w-[95%] lg:w-fit mx-auto gap-2 md:gap-7 shadow-md md:shadow-lg`}
         >
-            <div className="relative inset-0 w-full h-full ">
+            <div className="relative inset-0 w-full h-full overflow-hidden">
                 <Image
                     title={blog.title}
                     alt={blog.title}
                     src={blog.image}
                     width={1200}
-                    height={1200}
+                    height={800}
                     blurDataURL={blog.image}
                     quality={75}
-                    className="inset-0 m-auto max-w-full w-full h-auto  mb-12 mt-4  object-cover object-center"
+                    className="inset-0 m-auto h-full  w-auto  mt-4  object-cover object-center"
                 />
             </div>
 
-            <div className="absolute flex flex-col w-full h-full px-2 pb-2 mt-2 sm:mt-0 sm:p-1 lg:py-5  items-center justify-center text-center">
+            <div className="absolute flex flex-col w-full h-full px-2 pb-2 mt-10 sm:mt-0 sm:p-1 lg:py-5  items-center justify-center text-center">
                 <Link
                     href={`/blogs/${blog.slug}`}
-                    className=" rounded-full bg-black px-12 py-6 font-bold text-neutral-100 md:text-xl dark:text-neutral-200 hover:underline"
+                    className=" rounded-full bg-black px-12 py-6 mt-10 font-bold text-neutral-100 md:text-xl dark:text-neutral-200 hover:underline"
                 >
                     {blog.title}
                 </Link>
