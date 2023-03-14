@@ -29,6 +29,7 @@ export default function Blog({
             initial={animate && "hidden"}
             whileInView={animate ? "visible" : ""}
             viewport={{ once: true }}
+
             className={`relative ${colSpan} items-stretch flex flex-col justify-center w-full  mx-auto gap-2 md:gap-1 shadow-md md:shadow-lg`}
         >
             <div className="relative inset-0  h-screen overflow-hidden">
@@ -74,7 +75,7 @@ export default function Blog({
                 </p> */}
 
                 <div className=" tracking-tighter flex items-start justify-between mt-auto">
-                    <div className="flex flex-row flex-start z-10 text-white">
+                    <div className="flex flex-row flex-start text-slate-200">
                         <div className="grid grid-row-2 gap-2 ">
                             {keywords.split(',').slice(0, 2).map((word) => {
                                 return (
