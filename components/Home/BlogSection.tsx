@@ -16,7 +16,7 @@ export default function BlogSection({ blogs }: { blogs: FrontMatter[] }) {
     }
 
     return (
-        <section className='relative w-full bg-slate-50 h-full my-5 py-5'>
+        <section className='relative w-full overflow-hidden h-full my-5 lg:px-60 py-5 bg-[color:var(--color-bg)]'>
             <HomeHeading title="Recent works" />
             <div className="static grid-flow-row-dense grid grid-cols-2 gap-4 mx-auto my-10">
                 {/* Here start the project section */}

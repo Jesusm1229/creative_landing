@@ -82,7 +82,7 @@
 
 :root {
   --color-text: #000;
-  --color-bg: hsl(22deg 25% 73%);
+  --color-bg: #fcfbeb;
   --color-text-alt: hsl(1deg 69% 50%);
   --color-link: #000;
   --color-link-hover: #000;

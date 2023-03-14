@@ -45,7 +45,7 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                             <div className="flex flex-col gap-1">
                                 <motion.h1
                                     variants={opacityVariant}
-                                    className="section__title text-5xl lg:text-12xl font-kudryashev text-[clamp(2rem,17vw,12.5rem)] leading-[0.9] normal-case mt-[5vh] mb-[6vh] mx-0;
+                                    className="section__title text-5xl text-[color:var(--color-text-alt)] lg:text-12xl font-kudryashev text-[clamp(2rem,17vw,12.5rem)] leading-[0.9] normal-case mt-[5vh] mb-[6vh] mx-0;
                                     "
                                 >
                                     Charlotte<br /> LaRue
@@ -78,7 +78,7 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                     </div>
                 </motion.section>
 
-                <section className="absolute inset-0 w-full -z-10 h-fit  columns-2 md:columns-3 lg:columns-4 mx-auto">
+                <section className="absolute inset-0 w-full -z-10 h-fit  columns-2 md:columns-3 lg:columns-4 mx-auto overflow-clip">
                     <img className="mb-4" src="https://source.unsplash.com/random/1" />
                     <img className="mb-4" src="https://source.unsplash.com/random/2" />
                     <img className="mb-4" src="https://source.unsplash.com/random/3" />
@@ -95,9 +95,9 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                     <img className="mb-4" src="https://source.unsplash.com/random/15" />
                     <img className="mb-4" src="https://source.unsplash.com/random/16" />
                     <img className="mb-4" src="https://source.unsplash.com/random/17" />
-                    <img className="mb-4" src="https://source.unsplash.com/random/18" />
-                    <img className="mb-4" src="https://source.unsplash.com/random/19" />
-                    <img className="mb-4" src="https://source.unsplash.com/random/20" />
+                    <img className="mb-4 overflow-clip" src="https://source.unsplash.com/random/18" />
+                    <img className="mb-4 overflow-clip" src="https://source.unsplash.com/random/19" />
+                    <img className="mb-4 overflow-clip" src="https://source.unsplash.com/random/20" />
                 </section>
                 <div className="pt-[1290px]">
                     <BlogSection blogs={blogs} />
