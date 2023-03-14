@@ -104,8 +104,8 @@ export default function Blog({
                         rotateY: rotateY
                     }}
                     whileHover={{
-                        scale: [null, 1.1, 1.05],
-                        transition: { duration: 0.3 },
+                        scale: [null, 1.05],
+                        transition: { duration: 0.2 },
                     }}
                     onMouseMove={handleMouse}
                     onMouseLeave={() => {
