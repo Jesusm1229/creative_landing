@@ -111,21 +111,21 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
 
 export function HomeHeading({ title }: { title: React.ReactNode | string }) {
     return (
-        <div className="grid grid-cols-3 gap-4 place-items-center py-20" >
+        <div className="grid grid-cols-3 gap-4 place-items-center py-20 text-center" >
             <AnimatedText
-                className="w-full text-2xl font-bold text-center font-kudryashev"
+                className="w-full text-4xl font-bold text-center font-kudryashev"
                 variants={popUp}
             >
                 2000
             </AnimatedText>
             <AnimatedHeading
-                className="w-full text-8xl font-bold text-center font-kudryashev border-b-2 border-blue-800"
+                className="w-full text-8xl font-bold text-center justify-center font-kudryashev border-b-2 border-rose-500"
                 variants={popUp}
             >
                 {title}
             </AnimatedHeading>
             <AnimatedText
-                className="w-full text-2xl font-bold text-center font-kudryashev"
+                className="w-full text-4xl font-bold text-center font-kudryashev"
                 variants={popUp}
             >
                 2022
