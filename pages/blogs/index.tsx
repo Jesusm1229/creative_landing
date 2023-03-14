@@ -59,7 +59,7 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
                 keywords={pageMeta.blogs.keywords}
             />
 
-            <section className="pageTop flex flex-col gap-2">
+            <section className="pageTop flex flex-col gap-12">
                 {/*   <PageTop pageTitle="Blogs">
           I've been writing online since 2021, mostly about web development and
           tech careers. In total, I've written {blogs.length} articles till now.
@@ -90,7 +90,7 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
                     </button>
                 </AnimatedDiv> */}
 
-                <section className="relative py-5 w-full flex flex-col gap-2 min-h-[50vh]">
+                <section className="relative py-12 my-12 w-full flex flex-col gap-12 min-h-[50vh]">
                     <AnimatePresence>
                         {filteredBlogs.length != 0 ? (
                             <>
@@ -100,9 +100,12 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
                                 >
                                     <motion.h3
                                         variants={popUpFromBottomForText}
-                                        className="text-center font-bold text-2xl sm:text-3xl my-5"
+                                        className="text-center font-bold font-kudryashev text-[color:var(--color-text-alt)] text-2xl sm:text-9xl my-5"
                                     >
-                                        Archives ({filteredBlogs.length})
+                                        Archives
+                                        <span className="font-inter text-xs font-extralight sup">
+                                            ({filteredBlogs.length})
+                                        </span>
                                     </motion.h3>
 
                                     {/* <div className="flex items-center gap-2">

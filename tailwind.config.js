@@ -17,7 +17,7 @@ module.exports = {
       colors: {
         darkPrimary: "#181A1B",
         darkSecondary: "#25282A",
-        darkWhite: "#f2f5fa",
+        darkWhite: "#fcfbeb",
         "dark-3": "#b8b8b8",
       },
       listStyleType: {

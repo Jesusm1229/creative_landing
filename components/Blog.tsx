@@ -43,11 +43,11 @@ export default function Blog({
             <div className="absolute flex flex-col w-full h-full px-2 pb-2 mt-10 sm:mt-0 sm:p-1 lg:py-5  items-center justify-center text-center">
                 <Link
                     href={`/blogs/${blog.slug}`}
-                    className=" rounded-full border hover:bg-slate-600 border-slate-50 px-12 py-6 mt-10 font-bold text-neutral-100 md:text-xl dark:text-neutral-200 "
+                    className="font-kudryashev font-bold rounded-full border  border-slate-50 px-12 py-6 mx-6 mt-10  text-neutral-100 md:text-4xl dark:text-neutral-200 "
                 >
                     {blog.title}
                 </Link>
-                <span className="mt-2 text-base text-rose-600 font-semibold">
+                <span className="mt-2 text-lg text-rose-300 font-semibold">
                     {getFormattedDate(new Date(blog.date))}
                 </span>
                 <p className=" mt-3 text-sm sm:text-xs md:text-lg w-3/5 text-gray-100  line-clamp-3 sm:line-clamp-2 md:line-clamp-4 mb-2">
