@@ -227,7 +227,7 @@ code > .line::before {
 
 /* Nprogress bar Custom Styling (force) : STARTS */
 #nprogress .bar {
-  background-color: rgba(0, 89, 255, 0.7) !important;
+  background-color: var(--color-text-alt) !important;
   height: 3px !important;
 }
 .dark #nprogress .bar {
@@ -248,6 +248,27 @@ code > .line::before {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.mask {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mask::before {
+  content: "";
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.1;
 }
 
 /*SÓLO MDX*/

@@ -37,7 +37,7 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                     whileInView="visible"
                     variants={FadeContainer}
                     viewport={{ once: true }}
-                    className="section z-4 grid min-h-screen py-20 place-content-center"
+                    className="mask section z-4 grid min-h-screen py-20 place-content-center  "
                 >
                     <div className="relative flex flex-col items-center w-full gap-10 mx-auto">
 
@@ -102,7 +102,7 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                 <div className="pt-[1290px]">
                     <BlogSection blogs={blogs} />
                 </div>
-            </div>
+            </div >
 
 
         </>

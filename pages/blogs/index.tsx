@@ -100,7 +100,7 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
                                 >
                                     <motion.h3
                                         variants={popUpFromBottomForText}
-                                        className="text-center font-bold font-kudryashev text-[color:var(--color-text-alt)] text-2xl sm:text-9xl my-5"
+                                        className="text-center font-bold font-kudryashev text-[color:var(--color-text-alt)] text-2xl sm:text-9xl my-5 bg-opacity-10"
                                     >
                                         Archives
                                         <span className="font-inter text-xs font-extralight sup">
