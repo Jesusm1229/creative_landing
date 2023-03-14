@@ -46,7 +46,7 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
 
     //Adding margin to center column
     function colSpan(index: number) {
-        const colspan = index % 3 === 1 ? "mt-10 -mb-10" : "";
+        const colspan = index % 3 === 1 ? "mt-10 -mb-10" : index === 2 || index === 5 || index === 8 ? "mt-20 -mb-20" : "";
         return colspan;
     }
 
