@@ -57,6 +57,12 @@ export default function Blog({
         `;
     }
 
+    const removeListener = (e: any) => {
+        if (glowRef.current != null) {
+            glowRef.current.style.transform = '';
+            glowRef.current.style.background = '';
+        }
+    };
 
 
 
@@ -104,7 +110,7 @@ export default function Blog({
                         rotateY: rotateY
                     }}
                     whileHover={{
-                        scale: [null, 1.05],
+                        scale: [null, 1.1],
                         transition: { duration: 0.2 },
                     }}
                     onMouseMove={handleMouse}
