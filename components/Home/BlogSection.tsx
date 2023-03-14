@@ -22,7 +22,7 @@ export default function BlogSection({ blogs }: { blogs: FrontMatter[] }) {
                 {/* Here start the project section */}
                 {blogs.map((blog, index) => {
                     console.log(index)
-                    return <Blog key={`home-blog-${index}`} blog={blog} animate colSpan={colSpan(index)} />;
+                    return <Blog key={`home-blog-${index}`} blog={blog} animation colSpan={colSpan(index)} />;
                 })}
             </div>
         </section>

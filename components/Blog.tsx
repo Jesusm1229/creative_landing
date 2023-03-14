@@ -4,30 +4,68 @@ import { FrontMatter } from "@lib/types";
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { homeProfileImage } from "@utils/utils";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { BlogCardAnimation } from "@content/FramerMotionVariants";
 
 export default function Blog({
     blog,
-    animate = false,
+    animation = false,
     colSpan,
 }: {
     blog: FrontMatter;
-    animate?: boolean;
+    animation?: boolean;
     colSpan: string;
 }) {
     const blogRef = useRef(null);
+    const glowRef = useRef<HTMLDivElement>(null);
 
-    const [keywords, setkeywords] = useState(blog.keywords);
+    const [keywords,] = useState(blog.keywords);
 
     console.log(keywords);
+    const x = useMotionValue(200);
+    const y = useMotionValue(200);
+
+    const rotateX = useTransform(y, [0, 400], [15, -15]);
+    const rotateY = useTransform(x, [0, 400], [-15, 15]);
+
+    function handleMouse(event: any) {
+        const rect = event.currentTarget.getBoundingClientRect();
+
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+        const leftX = mouseX - rect.x;
+        const topY = mouseY - rect.y;
+        const center = {
+            x: leftX - rect.width / 2,
+            y: topY - rect.height / 2,
+        };
+        const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
+
+
+        x.set(event.clientX - rect.left);
+        y.set(event.clientY - rect.top);
+
+        if (glowRef.current != null)
+            glowRef.current.style.backgroundImage = `
+          radial-gradient(
+            circle at
+            ${center.x * 2 + rect.width / 2}px
+            ${center.y * 2 + rect.height / 2}px,
+            #ffffff55,
+            #0000000f
+          )
+        `;
+    }
+
+
+
 
     return (
         <motion.article
             ref={blogRef}
             variants={BlogCardAnimation}
-            initial={animate && "hidden"}
-            whileInView={animate ? "visible" : ""}
+            initial={animation && "hidden"}
+            whileInView={animation ? "visible" : ""}
             viewport={{ once: true }}
 
             className={`relative ${colSpan} items-stretch flex flex-col justify-center w-full  mx-auto gap-2 md:gap-1 shadow-md md:shadow-lg`}
@@ -44,7 +82,10 @@ export default function Blog({
                 />
             </div>
 
-            <div className="absolute flex flex-col w-full h-full px-2 pb-2 mt-10 sm:mt-0 sm:p-1 lg:py-5  items-center justify-center text-center">
+            <motion.div
+                className="absolute flex flex-col w-full h-full px-2 pb-2 mt-10 sm:mt-0 sm:p-1 lg:py-5  items-center justify-center text-center"
+
+            >
                 <Link
                     href={`/blogs/${blog.slug}`}
                     className="align-middle tracking-tighter font-kudryashev font-bold rounded-full border  border-slate-50 bg-slate-50/10 px-12 py-6 mx-6 mt-10  text-neutral-100 md:text-4xl dark:text-neutral-200 "
@@ -59,7 +100,19 @@ export default function Blog({
                     className="relative m-auto content-center w-full h-full"
                     style={{
                         clipPath: "inset(15% 20% 15% 20%);",
-                    }}>
+                        rotateX: rotateX,
+                        rotateY: rotateY
+                    }}
+                    whileHover={{
+                        scale: [null, 1.1, 1.05],
+                        transition: { duration: 0.3 },
+                    }}
+                    onMouseMove={handleMouse}
+                    onMouseLeave={() => {
+                        animate(x, 200);
+                        animate(y, 200);
+                    }}
+                >
                     <Image
                         className="absolute object-cover object-center h-full mb-4 overflow-clip"
                         src={blog.image}
@@ -67,6 +120,7 @@ export default function Blog({
                         fill
                         quality={75}
                     />
+                    <div ref={glowRef} className="glow" />
                 </motion.div>
 
 
@@ -108,7 +162,7 @@ export default function Blog({
                         {/*  <span>{blog.readingTime.text}</span> */}
                     </p>
                 </div>
-            </div>
+            </motion.div>
         </motion.article>
     );
 }
