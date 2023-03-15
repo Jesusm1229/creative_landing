@@ -81,6 +81,7 @@ export default function Blog({
             whileInView={animation ? "visible" : ""}
             viewport={{ once: true }}
             className={`relative ${colSpan} items-stretch flex flex-col justify-center w-full  mx-auto gap-2 md:gap-1 shadow-md md:shadow-lg`}
+
         >
             <div className="relative inset-0  h-screen overflow-hidden">
                 <Image
@@ -100,9 +101,19 @@ export default function Blog({
                 whileHover="hover"
                 animate="rest"
             >
+
+                {/* <button                    
+                    className="button button--winona  text-white"
+                    data-text={blog.title}
+                >
+                    <span>{blog.title}</span>
+
+                </button> */}
+
                 <Link
                     href={`/blogs/${blog.slug}`}
-                    className="align-middle tracking-tighter font-kudryashev font-bold rounded-full border  border-slate-50 bg-slate-50/10 px-12 py-6 mx-6 mt-10  text-neutral-100 md:text-4xl dark:text-neutral-200 "
+                    className=" overflow-hidden align-middle tracking-tighter font-kudryashev font-bold rounded-full border  border-slate-50 bg-slate-50/10 px-12 py-6 mx-6 mt-10  text-neutral-100 md:text-4xl dark:text-neutral-200 "
+                    data-text={blog.title}
                 >
                     {blog.title}
                 </Link>
