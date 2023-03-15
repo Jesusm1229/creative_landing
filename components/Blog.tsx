@@ -49,8 +49,8 @@ export default function Blog({
             glowRef.current.style.backgroundImage = `
           radial-gradient(
             circle at
-            ${center.x * 2 + rect.width / 2}px
-            ${center.y * 2 + rect.height / 2}px,
+            ${center.x * 1 + rect.width / 2}px
+            ${center.y * 1 + rect.height / 2}px,
             #ffffff55,
             #0000000f
           )
@@ -64,6 +64,13 @@ export default function Blog({
         }
     };
 
+    const articleMotion = {
+        rest: { scale: 1 },
+        hover: {
+            scale: 1.1,
+            transition: { duration: 0.2 },
+        }
+    }
 
 
     return (
@@ -73,7 +80,6 @@ export default function Blog({
             initial={animation && "hidden"}
             whileInView={animation ? "visible" : ""}
             viewport={{ once: true }}
-
             className={`relative ${colSpan} items-stretch flex flex-col justify-center w-full  mx-auto gap-2 md:gap-1 shadow-md md:shadow-lg`}
         >
             <div className="relative inset-0  h-screen overflow-hidden">
@@ -90,7 +96,9 @@ export default function Blog({
 
             <motion.div
                 className="absolute flex flex-col w-full h-full px-2 pb-2 mt-10 sm:mt-0 sm:p-1 lg:py-5  items-center justify-center text-center"
-
+                initial="rest"
+                whileHover="hover"
+                animate="rest"
             >
                 <Link
                     href={`/blogs/${blog.slug}`}
@@ -109,18 +117,21 @@ export default function Blog({
                         rotateX: rotateX,
                         rotateY: rotateY
                     }}
-                    whileHover={{
-                        scale: [null, 1.1],
-                        transition: { duration: 0.2 },
-                    }}
+                    variants={articleMotion}
+                    /*  whileHover={{
+                         scale: [null, 1.1],
+                         transition: { duration: 0.2 },
+                     }} */
                     onMouseMove={handleMouse}
+
                     onMouseLeave={() => {
                         animate(x, 200);
                         animate(y, 200);
+                        removeListener;
                     }}
                 >
                     <Image
-                        className="absolute object-cover object-center h-full mb-4 overflow-clip"
+                        className="absolute object-cover object-center h-full mb-4 overflow-clip "
                         src={blog.image}
                         alt={blog.title}
                         fill
