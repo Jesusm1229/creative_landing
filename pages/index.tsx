@@ -106,15 +106,18 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                 </div>
 
                 {/**Mover esta sección. Sección Servicio - Sección disponible - Footer */}
-                <div className="w-full ">
+                <div className="w-full">
                     <ServiceSection />
                 </div>
 
-                <div className="w-full">
+                <div className="w-full py-4">
+                    <Marquee />
+                </div>
+                <div className="w-[110%] rotate-2 bg-[color:var(--color-text-alt)] text-white -mt-12 py-4">
                     <Marquee />
                 </div>
 
-                
+
 
 
             </div >

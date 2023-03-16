@@ -28,8 +28,8 @@ module.exports = {
         wiggle: "wiggle 1s ease-in-out infinite",
         "photo-spin": "photo-spin 2s 1 linear forwards",
         loopL: "loopTextLeft  4s linear infinite",
-        marquee: "marquee 25s linear infinite",
-        marquee2: "marquee2 25s linear infinite",
+        marquee: "marquee 45s linear infinite",
+        marquee2: "marquee2 45s linear infinite",
       },
       keyframes: {
         wiggle: {

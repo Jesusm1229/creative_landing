@@ -98,8 +98,8 @@ export default function ServiceSection() {
             </div>
             <div className="relative w-full h-full gap-4 mx-auto my-2">
                 <div className="relative w-full h-full flex flex-col items-center justify-center gap-10 mx-auto">
-                    <img className="rotate-6 absolute w-[50%] h-[50%] m-auto inset-0" src="https://source.unsplash.com/random/3" />
-                    <img className="-rotate-6 absolute w-[50%] h-[50%] inset-0" src="https://source.unsplash.com/random/5" />
+                    <img className="rotate-6 absolute w-[50%] object-cover h-[50%] m-auto inset-0" src="https://source.unsplash.com/random/3" />
+                    <img className="-rotate-6 absolute w-[50%] object-cover h-[50%] inset-0" src="https://source.unsplash.com/random/5" />
                     {/* <div className="bg-sky-500 flex  w-full gap-3 p-5 text-center select-none ">
                         <div className="flex  gap-1">
                             <motion.h1
