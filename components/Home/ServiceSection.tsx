@@ -56,11 +56,30 @@ export default function ServiceSection() {
                         </motion.h2>
                     </div>
                     <ol className='max-w-md text-white list-decimal  list-inside     space-y-10'>
-                        <li className="border-b-2 border-b-indigo-50 w-full flex items-center align-center before:content-['1.'] before:mr-6 ">
-                            <div className='flex flex-row gap-2 my-auto content-center justify-center items-center '>
+                        <li className="w-full flex flex-col items-start align-start ">
+                            <div className="flex flex-row gap-2 my-auto  content-center justify-center items-center before:content-['1.'] before:mr-6 ">
                                 <span className="font-semibold text-3xl text-white">Bonnie Green</span> with <span className="font-semibold text-white">70</span> points
+
+                            </div>
+                            <div className='w-full h-min stroke-white p-[4%];'>
+                                <svg viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg">
+                                    <motion.path
+                                        initial={{ pathLength: 0 }}
+                                        animate={{ pathLength: 1 }}
+                                        transition={{
+                                            duration: 1,
+                                            ease: "easeInOut",
+                                            repeat: Infinity,
+                                            repeatType: "loop",
+                                            repeatDelay: 2
+                                        }}
+                                        strokeWidth={1}
+                                        d="M 0, 5 L 100, 5"
+                                    />
+                                </svg>
                             </div>
                         </li>
+
                         <li className="w-full flex items-center align-center before:content-['2.'] before:mr-6 ">
                             <div className='flex flex-row gap-2 my-auto content-center justify-center items-center '>
                                 <span className="font-semibold text-3xl text-white">Bonnie Green</span> with <span className="font-semibold text-white">70</span> points
@@ -77,8 +96,10 @@ export default function ServiceSection() {
 
 
             </div>
-            <div className="relative w-full h-screen bg-sky-200  gap-4 mx-auto my-10">
-                <div className="bg-sky-800 relative h-full flex flex-col items-center w-full gap-10 mx-auto">
+            <div className="relative w-full h-full gap-4 mx-auto my-2">
+                <div className="relative w-full h-full flex flex-col items-center justify-center gap-10 mx-auto">
+                    <img className="rotate-6 absolute w-[50%] h-[50%] m-auto inset-0" src="https://source.unsplash.com/random/3" />
+                    <img className="-rotate-6 absolute w-[50%] h-[50%] inset-0" src="https://source.unsplash.com/random/5" />
                     {/* <div className="bg-sky-500 flex  w-full gap-3 p-5 text-center select-none ">
                         <div className="flex  gap-1">
                             <motion.h1

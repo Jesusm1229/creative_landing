@@ -27,6 +27,9 @@ module.exports = {
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite",
         "photo-spin": "photo-spin 2s 1 linear forwards",
+        loopL: "loopTextLeft  4s linear infinite",
+        marquee: "marquee 25s linear infinite",
+        marquee2: "marquee2 25s linear infinite",
       },
       keyframes: {
         wiggle: {
@@ -36,6 +39,18 @@ module.exports = {
         "photo-spin": {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
+        },
+        loopTextLeft: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        marquee2: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" },
         },
       },
       screens: {

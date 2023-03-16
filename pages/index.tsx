@@ -20,6 +20,7 @@ import getRSS from "@lib/generateRSS";
 import MDXContent from "@lib/MDXContent";
 import BlogSection from "@components/Home/BlogSection";
 import ServiceSection from "@components/Home/ServiceSection";
+import Marquee from "@components/Marquee";
 
 export default function Home({ blogs }: { blogs: FrontMatter[] }) {
 
@@ -108,6 +109,12 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                 <div className="w-full ">
                     <ServiceSection />
                 </div>
+
+                <div className="w-full">
+                    <Marquee />
+                </div>
+
+                
 
 
             </div >

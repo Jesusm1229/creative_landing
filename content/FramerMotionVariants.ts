@@ -108,11 +108,15 @@ export const FadeContainer: Variants = {
 export const svgVariant: Variants = {
   hidden: {
     pathLength: 0,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+    },
   },
   visible: {
     pathLength: 1,
     transition: {
-      duration: 4,
+      duration: 1,
       ease: "easeInOut",
     },
   },
