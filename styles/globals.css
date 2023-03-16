@@ -109,7 +109,7 @@ sub {
 :root {
   --color-text: #000;
   --color-bg: #fcfbeb;
-  --color-text-alt: hsl(1deg 69% 50%);
+  --color-text-alt: #f20e0e;
   --color-link: #000;
   --color-link-hover: #000;
   /* Column/item variables */

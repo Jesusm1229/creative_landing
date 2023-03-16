@@ -20,4 +20,5 @@ module.exports = {
   typescript: {
     ignoreBuildErrors: false,
   },
+  plugins: [require("prettier-plugin-tailwindcss")],
 };
