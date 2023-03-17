@@ -18,7 +18,7 @@ export default function ServiceSection() {
             whileInView="visible"
             variants={FadeContainer}
             viewport={{ once: true }}
-            className="relative w-full overflow-hidden h-full  lg:px-6 bg-[color:var(--color-text-alt)] grid grid-cols-2 gap-6 min-h-screen py-20 place-content-stretch"
+            className="relative w-full overflow-hidden h-full  lg:px-6 bg-[color:var(--color-text-alt)] grid grid-cols-2 gap-6 min-h-screen py-4 place-content-stretch"
         >
 
             <div className="relative w-full h-screen   gap-4 mx-auto my-10">
@@ -97,9 +97,10 @@ export default function ServiceSection() {
 
             </div>
             <div className="relative w-full h-full gap-4 mx-auto my-2">
-                <div className="relative w-full h-full flex flex-col items-center justify-center gap-10 mx-auto">
-                    <img className="rotate-6 absolute w-[50%] object-cover h-[50%] m-auto inset-0" src="https://source.unsplash.com/random/3" />
-                    <img className="-rotate-6 absolute w-[50%] object-cover h-[50%] inset-0" src="https://source.unsplash.com/random/5" />
+                <div className="relative w-full h-full flex flex-col items-center justify-center gap-1 mx-auto">
+
+                    <img className="rotate-6 absolute w-[50%] object-cover h-[50%] inset-0 mx-auto mt-[40%]" src="https://source.unsplash.com/random/5" />
+                    <img className="-rotate-6 absolute w-[50%] object-cover h-[50%] mt-20 inset-0" src="https://source.unsplash.com/random/3" />
                     {/* <div className="bg-sky-500 flex  w-full gap-3 p-5 text-center select-none ">
                         <div className="flex  gap-1">
                             <motion.h1
