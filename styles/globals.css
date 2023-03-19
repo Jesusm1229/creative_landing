@@ -281,6 +281,31 @@ code > .line::before {
   opacity: 0.1;
 }
 
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: var(--color-text-alt);
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-text-alt);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out, height 0.3s 0.2s;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  height: 8px;
+}
+
 /*SÓLO MDX*/
 /* Layers Components or the custom class extends with tailwind */
 @layer components {

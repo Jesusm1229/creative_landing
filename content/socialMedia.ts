@@ -6,31 +6,31 @@ import { HiMail } from "react-icons/hi";
 import { SiCodepen } from "react-icons/si";
 
 const socialMedia: SocialPlatform[] = [
-  {
+  /*   {
     title: "Twitter",
     Icon: AiOutlineTwitter,
-    url: "",
+    url: "https://twitter.com/",
   },
   {
     title: "LinkedIn",
     Icon: BsLinkedin,
-    url: "",
-  },
+    url: "gagaga",
+  }, */
   {
     title: "Instagram",
     Icon: AiOutlineInstagram,
-    url: "",
+    url: "gagag",
   },
-  {
+  /*  {
     title: "Facebook",
     Icon: BsFacebook,
-    url: "",
-  },
-  {
+    url: "aggagag",
+  }, */
+  /*  {
     title: "Mail",
     Icon: HiMail,
     url: "mailto:@gmail.com",
-  },
+  }, */
 ];
 
 export default socialMedia;
