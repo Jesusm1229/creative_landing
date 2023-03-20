@@ -53,10 +53,10 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
     return (
         <>
             <Metadata
-                title={pageMeta.blogs.title}
-                description={pageMeta.blogs.description}
-                previewImage={pageMeta.blogs.image}
-                keywords={pageMeta.blogs.keywords}
+                title={pageMeta.archives.title}
+                description={pageMeta.archives.description}
+                previewImage={pageMeta.archives.image}
+                keywords={pageMeta.archives.keywords}
             />
 
             <section className="pageTop flex flex-col gap-12">
@@ -108,25 +108,7 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
                                         </span>
                                     </motion.h3>
 
-                                    {/* <div className="flex items-center gap-2">
-                                        <Link href="/blogs/bookmark" legacyBehavior>
-                                            <motion.div variants={popUp}>
-                                                <BsBookmark
-                                                    title="Bookmark"
-                                                    className="text-2xl cursor-pointer"
-                                                />
-                                            </motion.div>
-                                        </Link>
 
-                                        <Link href="/rss" legacyBehavior>
-                                            <motion.div variants={popUp}>
-                                                <BiRss
-                                                    title="RSS"
-                                                    className="text-3xl cursor-pointer"
-                                                />
-                                            </motion.div>
-                                        </Link>
-                                    </div> */}
                                 </AnimatedDiv>
 
                                 <AnimatedDiv

@@ -44,19 +44,19 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                     <div className="relative flex flex-col items-center w-full gap-10 mx-auto">
 
                         <div className="flex flex-col w-full gap-3 p-5 text-center select-none ">
-                            <div className="flex flex-col gap-1">
+                            <div className="flex flex-col gap-1 text-[color:var(--color-text-alt)] ">
                                 <motion.h1
                                     variants={opacityVariant}
-                                    className="section__title text-5xl text-[color:var(--color-text-alt)] lg:text-12xl font-kudryashev text-[clamp(2rem,17vw,12.5rem)] leading-[0.9] normal-case mt-[5vh] mb-[6vh] mx-0;
+                                    className="section__title text-5xl lg:text-12xl font-kudryashev text-[clamp(2rem,17vw,12.5rem)] leading-[0.9] normal-case mt-[5vh] mb-[6vh] mx-0;
                                     "
                                 >
                                     Charlotte<br /> LaRue
                                 </motion.h1>
                                 <motion.p
                                     variants={opacityVariant}
-                                    className="font-medium text-xs md:text-sm lg:text-lg text-[#383838] dark:text-gray-200"
+                                    className="font-medium text-xs md:text-sm lg:text-lg  dark:text-gray-200"
                                 >
-                                    I’M A FREELANCE MAKE-UP ARTIST BASED IN PARIS WORKING FOR FASHION AND BEAUTY BRANDS
+                                    I’M A FREELANCE MAKE-UP ARTIST BASED <br />IN PARIS WORKING FOR FASHION <br /> AND BEAUTY BRANDS
                                 </motion.p>
                             </div>
 

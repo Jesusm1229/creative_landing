@@ -111,7 +111,7 @@ export default function Blog({
                 </button> */}
 
                 <Link
-                    href={`/blogs/${blog.slug}`}
+                    href={`/archives/${blog.slug}`}
                     className=" overflow-hidden align-middle tracking-tighter font-kudryashev font-bold rounded-full border  border-slate-50 bg-slate-50/10 px-12 py-6 mx-6 mt-10  text-neutral-100 md:text-4xl dark:text-neutral-200 "
                     data-text={blog.title}
                 >

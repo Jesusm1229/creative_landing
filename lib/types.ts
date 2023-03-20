@@ -147,7 +147,7 @@ export type PageData = {
 
 export type PageMeta = {
   home: PageData;
-  blogs: PageData;
+  archives: PageData;
   bookmark: PageData;
 };
 

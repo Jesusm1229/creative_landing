@@ -1,5 +1,5 @@
 import Blog from '@components/Blog';
-import Project from '@components/Project';
+
 import { BlogCardAnimation, FadeContainer, opacityVariant } from '@content/FramerMotionVariants';
 import { FrontMatter } from '@lib/types';
 import { animate, motion } from 'framer-motion';
@@ -52,13 +52,13 @@ export default function ServiceSection() {
 
                             className="w-full text-5xl text-white m-auto"
                         >
-                            Im' an expert in<br />
+                            I can help you with<br />
                         </motion.h2>
                     </div>
                     <ol className='max-w-md text-white list-decimal  list-inside     space-y-10'>
                         <li className="w-full flex flex-col items-start align-start ">
                             <div className="flex flex-row gap-2 my-auto  content-center justify-center items-center before:content-['1.'] before:mr-6 ">
-                                <span className="font-semibold text-3xl text-white">Bonnie Green</span> with <span className="font-semibold text-white">70</span> points
+                                <span className=" font-semibold text-3xl text-white">Make-up</span> beauty <span className="uppercase font-semibold text-white">TOP</span> fashion
 
                             </div>
                             <div className='w-full h-min stroke-white p-[4%];'>
@@ -82,12 +82,12 @@ export default function ServiceSection() {
 
                         <li className="w-full flex items-center align-center before:content-['2.'] before:mr-6 ">
                             <div className='flex flex-row gap-2 my-auto content-center justify-center items-center '>
-                                <span className="font-semibold text-3xl text-white">Bonnie Green</span> with <span className="font-semibold text-white">70</span> points
+                                <span className="font-semibold text-3xl text-white">Hair </span>
                             </div>
                         </li>
-                        <li className="w-full flex items-center align-center before:content-['2.'] before:mr-6 ">
+                        <li className="w-full flex items-center align-center before:content-['3.'] before:mr-6 ">
                             <div className='flex flex-row gap-2 my-auto content-center justify-center items-center '>
-                                <span className="font-semibold text-3xl text-white">Bonnie Green</span> with <span className="font-semibold text-white">70</span> points
+                                <span className="font-semibold text-3xl text-white">Creative Direction</span>
                             </div>
                         </li>
                     </ol>

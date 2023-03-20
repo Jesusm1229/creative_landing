@@ -31,7 +31,7 @@ export default function Footer() {
 
                             className="hover-underline-animation text-5xl text-[color:var(--color-text-alt)] lg:text-9xl font-kudryashev  leading-[0.9] normal-case m-auto"
                         >
-                            Let's work together
+                            Let,s work together
                         </motion.h1>
                         <div className="relative flex flex-col items-center w-full h-full gap-1 m-auto inset-0">
                             <div className="absolute inset-x-0 bottom-0  grid grid-col-1 gap-2 text-black justify-center align-self w-full h-full">

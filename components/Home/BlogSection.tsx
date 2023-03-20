@@ -1,5 +1,4 @@
 import Blog from '@components/Blog';
-import Project from '@components/Project';
 import { BlogCardAnimation } from '@content/FramerMotionVariants';
 import { FrontMatter } from '@lib/types';
 import { animate, motion } from 'framer-motion';
