@@ -112,7 +112,7 @@ export default function Blog({
 
                 <Link
                     href={`/archives/${blog.slug}`}
-                    className=" overflow-hidden align-middle tracking-tighter font-kudryashev font-bold rounded-full border  border-slate-50 bg-slate-50/10 px-12 py-6 mx-6 mt-10  text-neutral-100 md:text-4xl dark:text-neutral-200 "
+                    className=" overflow-hidden align-middle tracking-tighter font-kudryashev font-bold rounded-full border  border-slate-50 bg-slate-50/10 hover:bg-slate-50/50 transition-all px-12 py-6 mx-6 mt-10  text-neutral-100 md:text-4xl dark:text-neutral-200 "
                     data-text={blog.title}
                 >
                     {blog.title}
@@ -122,7 +122,7 @@ export default function Blog({
                 </span>
 
                 <motion.div
-                    className="relative m-auto content-center w-full h-full"
+                    className="relative m-auto content-center w-[50%] h-[50%]"
                     style={{
                         clipPath: "inset(15% 20% 15% 20%);",
                         rotateX: rotateX,

@@ -60,7 +60,7 @@ export default function BlogLayout({
         <div className="flex items-center !w-full text-gray-700 dark:text-gray-300">
           <div className="flex items-center w-full gap-2">
             <Image
-              alt="Jatin Sharma"
+              alt="Profile"
               height={30}
               width={30}
               src={homeProfileImage}

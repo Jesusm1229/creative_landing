@@ -3,21 +3,15 @@ import Image from "next/image";
 import socialMedia from "@content/socialMedia";
 import {
     FadeContainer,
-    opacityVariant,
     popUp,
 } from "../content/FramerMotionVariants";
-import { navigationRoutes } from "../utils/utils";
 import { motion } from "framer-motion";
-import { BsInstagram } from "react-icons/bs";
-import useSWR from "swr";
-import fetcher from "../lib/fetcher";
-import { HiOutlineQrcode } from "react-icons/hi";
-import { BsDot } from "react-icons/bs";
+
 
 
 export default function Footer() {
     return (
-        <footer className="relative w-screen h-screen text-[color:var(--color-text-alt)]p-5 print:hidden ">
+        <footer className="relative w-screen h-screen text-[color:var(--color-text-alt)] p-5 print:hidden ">
             <motion.section
                 initial="hidden"
                 whileInView="visible"

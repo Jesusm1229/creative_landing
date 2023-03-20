@@ -50,7 +50,7 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                                     className="section__title text-5xl lg:text-12xl font-kudryashev text-[clamp(2rem,17vw,12.5rem)] leading-[0.9] normal-case mt-[5vh] mb-[6vh] mx-0;
                                     "
                                 >
-                                    Charlotte<br /> LaRue
+                                    Valentina<br /> LaRue
                                 </motion.h1>
                                 <motion.p
                                     variants={opacityVariant}

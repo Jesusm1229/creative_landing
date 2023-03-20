@@ -1,10 +1,5 @@
-import Blog from '@components/Blog';
-
 import { BlogCardAnimation, FadeContainer, opacityVariant } from '@content/FramerMotionVariants';
-import { FrontMatter } from '@lib/types';
 import { animate, motion } from 'framer-motion';
-import Link from 'next/link';
-import { HomeHeading } from 'pages'
 import React from 'react'
 
 //Here we bring all the 

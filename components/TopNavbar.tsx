@@ -43,6 +43,14 @@ export default function TopNavBar() {
             </AnimatePresence>
 
             <Link href="/" className="mr-3" aria-label="Link to Home Page">
+                <motion.a
+                    initial="hidden"
+                    animate="visible"
+                    variants={FadeContainer}
+                    className="relative hidden sm:inline-flex mr-3"
+                >
+                    <h1 className="font-kudryashev text-[color:var(--color-text-alt)] text-xl ">VALENTINA</h1>
+                </motion.a>
                 {/* <Logo className="relative hidden w-8 h-8 sm:inline-flex" /> */}
                 <div className="w-full sm:!hidden">
                     <motion.p
@@ -65,7 +73,7 @@ export default function TopNavBar() {
                     initial="hidden"
                     animate="visible"
                     variants={FadeContainer}
-                    className="flex items-center md:gap-2"
+                    className="flex items-center md:gap-2 uppercase"
                 >
                     {navigationRoutes.map((link, index) => {
                         return <NavItem key={index} href={`/${link}`} text={link} />;
@@ -87,12 +95,12 @@ function NavItem({ href, text }: { href: string; text: string }) {
     return (
         <Link
             className={`${isActive
-                ? "font-bold text-gray-800"
-                : " text-gray-600 "
-                } sm:inline-block transition-all text-[17px] hidden px-2 md:px-3 py-[3px] hover:bg-black/10  rounded-md`}
+                ? "font-bold text-[color:var(--color-text-alt)]"
+                : " text-[color:var(--color-text-alt)] "
+                } sm:inline-block transition-all text-[17px] hidden px-2 md:px-3 py-[10px]  link link-underline link-underline-black`}
             href={href === "/home" ? "/" : href}
         >
-            <motion.p className="capitalize" variants={popUp}>
+            <motion.p className="uppercase" variants={popUp}>
                 {text}
             </motion.p>
         </Link>
