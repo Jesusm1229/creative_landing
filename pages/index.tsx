@@ -1,5 +1,5 @@
 // Page Components START----------
-import Image from "next/image";
+/* import Image from "next/image"; */
 import Metadata from "@components/MetaData";
 import {
     FadeContainer,
