@@ -390,7 +390,7 @@ code > .line::before {
     @apply my-5 !w-full font-medium dark:text-neutral-400;
   }
   .section {
-    @apply static top-0 z-[4] min-h-screen w-full bg-[color:var(--color-bg)] leading-none;
+    @apply static top-0 z-[4] w-full bg-[color:var(--color-bg)] leading-none  md:min-h-screen;
   }
 
   .section__title {
