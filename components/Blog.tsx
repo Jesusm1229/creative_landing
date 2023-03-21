@@ -159,27 +159,27 @@ export default function Blog({
                 <div className=" tracking-tighter flex items-start justify-between m-auto md:mt-auto ">
                     <div className="flex flex-row flex-start text-slate-200">
                         <div className="grid grid-row-2 gap-2 ">
-                            {keywords.split(',').slice(0, 2).map((word) => {
+                            {keywords.split(',').slice(0, 2).map((word, i) => {
                                 return (
-                                    <span className="m-auto align-middle text-lg text-center   mx-2 px-2 rounded-full border  border-slate-50">
+                                    <span className="m-auto align-middle text-lg text-center   mx-2 px-2 rounded-full border  border-slate-50" key={i}>
                                         {word}
                                     </span>
                                 )
                             })}
                         </div>
                         <div className="grid grid-row-2 gap-2">
-                            {keywords.split(',').slice(2, 4).map((word) => {
+                            {keywords.split(',').slice(2, 4).map((word, i) => {
                                 return (
-                                    <span className="m-auto align-middle text-lg text-center   mx-2 px-2 rounded-full border  border-slate-50">
+                                    <span className="m-auto align-middle text-lg text-center   mx-2 px-2 rounded-full border  border-slate-50" key={i}>
                                         {word}
                                     </span>
                                 )
                             })}
                         </div>
                         <div className="grid grid-row-2 gap-2">
-                            {keywords.split(',').slice(5, 6).map((word) => {
+                            {keywords.split(',').slice(5, 6).map((word, i) => {
                                 return (
-                                    <span className="m-auto align-middle text-lg text-center   mx-2 px-2 rounded-full border  border-slate-50">
+                                    <span className="m-auto align-middle text-lg text-center   mx-2 px-2 rounded-full border  border-slate-50" key={i}>
                                         {word}
                                     </span>
                                 )
