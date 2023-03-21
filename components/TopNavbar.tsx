@@ -49,7 +49,7 @@ export default function TopNavBar() {
                     variants={FadeContainer}
                     className="relative hidden sm:inline-flex mr-3"
                 >
-                    <h1 className="font-kudryashev text-[color:var(--color-text-alt)] text-xl ">VALENTINA</h1>
+                    <h1 className="font-kudryashev text-[color:var(--color-text-alt)] text-3xl ">VALENTINA</h1>
                 </motion.a>
                 {/* <Logo className="relative hidden w-8 h-8 sm:inline-flex" /> */}
                 <div className="w-full sm:!hidden">
@@ -127,11 +127,11 @@ function HamBurger({
             {!open ? (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 duration-300 transform rounded-md cursor-pointer select-none active:scale-50"
+                    className="w-12 h-12 duration-300 transform rounded-md cursor-pointer select-none active:scale-50"
                     onClick={handleClick}
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
+                    stroke="#f20e0e"
                     strokeWidth={2}
                 >
                     <path
@@ -143,11 +143,11 @@ function HamBurger({
             ) : (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 duration-300 transform rounded-md cursor-pointer select-none active:scale-50"
+                    className="w-12 h-12 duration-300 transform rounded-md cursor-pointer select-none active:scale-50"
                     onClick={handleClick}
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
+                    stroke="#fcfbeb"
                     strokeWidth={2}
                 >
                     <path
@@ -171,7 +171,7 @@ const MobileMenu = ({
 }) => {
     return (
         <motion.div
-            className="absolute top-0 left-0 z-10 w-screen h-screen font-normal bg-white sm:hidden"
+            className="absolute top-0 left-0 z-10 w-screen h-screen font-normal bg-[color:var(--color-text-alt)] sm:hidden"
             variants={hamFastFadeContainer}
             initial="hidden"
             animate="visible"
@@ -186,7 +186,7 @@ const MobileMenu = ({
                             href={navlink}
                             key={`mobileNav-${index}`}
                             onClick={handleClick}
-                            className="flex w-auto py-4 text-base font-semibold text-gray-900 capitalize border-b border-gray-300 cursor-pointer "
+                            className="flex w-auto py-4 text-xl font-semibold text-white capitalize border-b border-gray-50 cursor-pointer "
                         >
                             <motion.p variants={mobileNavItemSideways}>
                                 {link === "rss" ? link.toUpperCase() : link}

@@ -23,7 +23,7 @@ export default function Footer() {
                     <div className="m-auto flex flex-col relative w-full h-full gap-10">
                         <motion.h1
 
-                            className="hover-underline-animation text-5xl text-[color:var(--color-text-alt)] lg:text-9xl font-kudryashev  leading-[0.9] normal-case m-auto"
+                            className="hover-underline-animation text-7xl text-[color:var(--color-text-alt)] lg:text-9xl font-kudryashev  leading-[0.9] normal-case m-auto"
                         >
                             Let,s work together
                         </motion.h1>

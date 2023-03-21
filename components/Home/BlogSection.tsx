@@ -10,7 +10,7 @@ import React from 'react'
 export default function BlogSection({ blogs }: { blogs: FrontMatter[] }) {
 
     function colSpan(index: number) {
-        const colspan = index === 0 ? "col-span-2" : "col-span-1";
+        const colspan = index === 0 ? "col-span-2 " : "col-span-2 md:col-span-1";
         return colspan;
     }
 

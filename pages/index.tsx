@@ -28,10 +28,6 @@ import gsap from "gsap";
 export default function Home({ blogs }: { blogs: FrontMatter[] }) {
 
 
-
-
-
-
     return (
         <>
             <Metadata
@@ -46,7 +42,7 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                     whileInView="visible"
                     variants={FadeContainer}
                     viewport={{ once: true }}
-                    className="mask section z-4 grid min-h-screen py-20 place-content-center  "
+                    className="mask section z-4 grid  md:min-h-screen py-20 place-content-center  "
                 >
                     <div className="relative flex flex-col items-center w-full gap-10 mx-auto">
 
@@ -74,16 +70,6 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
 
                             </motion.p>
                         </div>
-
-                        {/*     <Link
-                            href="https://bit.ly/valentinaCV"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-5 py-2 transition-transform border border-gray-500 rounded-md outline-none select-none dark:border-gray-400 hover:bg-white dark:hover:bg-neutral-800 active:scale-95"
-                        >
-                            <FiDownload />
-                            <p>Resume</p>
-                        </Link> */}
                     </div>
                 </motion.section>
 
@@ -120,13 +106,9 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                 <div className="w-full py-4">
                     <Marquee direction={true} />
                 </div>
-                <div className="w-[110%] rotate-2 bg-[color:var(--color-text-alt)] text-white -mt-12 py-4">
+                <div className="w-full md:rotate-2 bg-[color:var(--color-text-alt)] text-white md:-mt-12 py-4">
                     <Marquee direction={false} />
                 </div>
-
-
-
-
             </div >
 
 
@@ -138,20 +120,20 @@ export function HomeHeading({ title }: { title: React.ReactNode | string }) {
     return (
         <div className="grid grid-cols-3 gap-4 place-items-center py-20 text-center" >
             <AnimatedText
-                className="w-full text-4xl font-bold text-center font-kudryashev"
-                variants={popUp}
+                className="w-full text-2xl md:text-4xl font-bold text-center font-kudryashev"
+                variants={FadeContainer}
             >
                 2000
             </AnimatedText>
             <AnimatedHeading
-                className="w-full text-8xl font-bold text-center justify-center font-kudryashev border-b-2 border-rose-500"
-                variants={popUp}
+                className="w-full text-4xl md:text-8xl  font-bold text-center justify-center font-kudryashev border-b-2 border-rose-500"
+                variants={FadeContainer}
             >
                 {title}
             </AnimatedHeading>
             <AnimatedText
-                className="w-full text-4xl font-bold text-center font-kudryashev"
-                variants={popUp}
+                className="w-full text-2xl md:text-4xl font-bold text-center font-kudryashev"
+                variants={FadeContainer}
             >
                 2022
             </AnimatedText>

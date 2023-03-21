@@ -46,9 +46,11 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
 
     //Adding margin to center column
     function colSpan(index: number) {
-        const colspan = index % 3 === 1 ? "mt-10 -mb-10" : index === 2 || index === 5 || index === 8 ? "mt-20 -mb-20" : "";
-        return colspan;
+        const colspan = index % 3 === 1 ? "md:mt-10 md:-mb-10" : index === 2 || index === 5 || index === 8 ? "md:mt-20 md:-mb-20" : "";
+
+        return colspan + " col-span-full md:col-span-1";
     }
+
 
     return (
         <>
@@ -100,7 +102,7 @@ export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
                                 >
                                     <motion.h3
                                         variants={popUpFromBottomForText}
-                                        className="text-center font-bold font-kudryashev text-[color:var(--color-text-alt)] text-2xl sm:text-9xl my-5 bg-opacity-10"
+                                        className="text-center font-bold font-kudryashev text-[color:var(--color-text-alt)] text-7xl sm:text-9xl my-5 bg-opacity-10"
                                     >
                                         Archives
                                         <span className="font-inter text-xs font-extralight sup">

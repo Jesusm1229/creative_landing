@@ -262,8 +262,8 @@ code > .line::before {
 
 .mask {
   position: relative;
-  height: 100vh;
-  width: 100%;
+  height: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -390,7 +390,7 @@ code > .line::before {
     @apply my-5 !w-full font-medium dark:text-neutral-400;
   }
   .section {
-    @apply static top-0 z-[4] w-full bg-[color:var(--color-bg)] leading-none  md:min-h-screen;
+    @apply static top-0 z-[4] h-1/2 w-full bg-[color:var(--color-bg)] leading-none;
   }
 
   .section__title {

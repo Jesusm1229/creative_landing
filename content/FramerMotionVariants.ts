@@ -75,7 +75,7 @@ export const fromTopVariant: Variants = {
 
 export const opacityVariant: Variants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { delay: 0.2 } },
+  visible: { opacity: 1, transition: { delay: 1.5 } },
 };
 
 export const hamFastFadeContainer: Variants = {
