@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[NAME]]></title>
+        <description><![CDATA[In total, I've written 7 articles
+            till now.]]></description>
+        <link>DOMAIN</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Tue, 21 Mar 2023 20:08:26 GMT</lastBuildDate>
+        <atom:link href="DOMAIN/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Tue, 21 Mar 2023 20:08:26 GMT</pubDate>
+        <copyright><![CDATA[All rights reserved 2023, ]]></copyright>
+        <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[Tile of the blog]]></title>
+            <description><![CDATA[description of the blog]]></description>
+            <link>DOMAIN/archives/temp</link>
+            <guid isPermaLink="true">DOMAIN/archives/temp</guid>
+            <pubDate>Sun, 04 Sep 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Windows Commands Cheat Sheet]]></title>
+            <description><![CDATA[This is the Cheat Sheet of Windows Commands. It gives you all the commands and a short description of the command. I've also attached the documentation link for further reading.]]></description>
+            <link>DOMAIN/archives/windows-commands</link>
+            <guid isPermaLink="true">DOMAIN/archives/windows-commands</guid>
+            <pubDate>Wed, 17 Aug 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Windows Commands Cheat Sheet]]></title>
+            <description><![CDATA[This is the Cheat Sheet of Windows Commands. It gives you all the commands and a short description of the command. I've also attached the documentation link for further reading.]]></description>
+            <link>DOMAIN/archives/windows-commands-Copy</link>
+            <guid isPermaLink="true">DOMAIN/archives/windows-commands-Copy</guid>
+            <pubDate>Wed, 17 Aug 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Windows Commands Cheat Sheet]]></title>
+            <description><![CDATA[This is the Cheat Sheet of Windows Commands. It gives you all the commands and a short description of the command. I've also attached the documentation link for further reading.]]></description>
+            <link>DOMAIN/archives/windows-commands-Copy-Copy</link>
+            <guid isPermaLink="true">DOMAIN/archives/windows-commands-Copy-Copy</guid>
+            <pubDate>Wed, 17 Aug 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Windows Commands Cheat Sheet]]></title>
+            <description><![CDATA[This is the Cheat Sheet of Windows Commands. It gives you all the commands and a short description of the command. I've also attached the documentation link for further reading.]]></description>
+            <link>DOMAIN/archives/windows-commands-Copy(2)</link>
+            <guid isPermaLink="true">DOMAIN/archives/windows-commands-Copy(2)</guid>
+            <pubDate>Wed, 17 Aug 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why I ditched chrome for Edge?]]></title>
+            <description><![CDATA[I've been using google chrome for a long time I love the extensions and the look and feel of chrome but then I realized that all these extensions now work on the new Microsoft edge plus edge got a bunch of additional features. That I always wish chrome had let's take a look at why edge may be the better choice.]]></description>
+            <link>DOMAIN/archives/why-i-ditched-chrome-for-edge</link>
+            <guid isPermaLink="true">DOMAIN/archives/why-i-ditched-chrome-for-edge</guid>
+            <pubDate>Sun, 12 Dec 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why I ditched chrome for Edge?]]></title>
+            <description><![CDATA[I've been using google chrome for a long time I love the extensions and the look and feel of chrome but then I realized that all these extensions now work on the new Microsoft edge plus edge got a bunch of additional features. That I always wish chrome had let's take a look at why edge may be the better choice.]]></description>
+            <link>DOMAIN/archives/why-i-ditched-chrome-for-edge-Copy</link>
+            <guid isPermaLink="true">DOMAIN/archives/why-i-ditched-chrome-for-edge-Copy</guid>
+            <pubDate>Sun, 12 Dec 2021 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
