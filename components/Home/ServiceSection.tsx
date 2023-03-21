@@ -1,5 +1,5 @@
-import { BlogCardAnimation, FadeContainer, opacityVariant } from '@content/FramerMotionVariants';
-import { animate, motion, useInView } from 'framer-motion';
+import { FadeContainer } from '@content/FramerMotionVariants';
+import { motion, useInView } from 'framer-motion';
 import React from 'react'
 import { useRef } from "react";
 
@@ -10,20 +10,7 @@ export default function ServiceSection() {
 
 
 
-    const pathVariants = {
-        initial: {
-            opacity: 0,
-            pathLength: 0
-        },
-        final: {
-            opacity: 1,
-            pathLength: 1,
-            transition: {
-                duration: 2,
-                ease: "easeInOut"
-            }
-        }
-    };
+
 
 
     return (
