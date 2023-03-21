@@ -3,7 +3,7 @@ import { getFormattedDate } from "@utils/date";
 import { FrontMatter } from "@lib/types";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { homeProfileImage } from "@utils/utils";
+
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { BlogCardAnimation } from "@content/FramerMotionVariants";
 
