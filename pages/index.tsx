@@ -3,15 +3,15 @@ import Image from "next/image";
 import Metadata from "@components/MetaData";
 import {
     FadeContainer,
-    headingFromLeft,
+
     opacityVariant,
-    popUp,
+
 } from "@content/FramerMotionVariants";
 import { motion } from "framer-motion";
 import pageMeta from "@content/meta";
 import generateSitemap from "@lib/sitemap";
-import React, { useEffect } from "react";
-import Link from "next/link";
+import React from "react";
+/* import Link from "next/link"; */
 
 import AnimatedHeading from "@components/FramerMotion/AnimatedHeading";
 import AnimatedText from "@components/FramerMotion/AnimatedText";
@@ -21,8 +21,8 @@ import MDXContent from "@lib/MDXContent";
 import BlogSection from "@components/Home/BlogSection";
 import ServiceSection from "@components/Home/ServiceSection";
 import Marquee from "@components/Marquee";
-import Lenis from "@studio-freight/lenis";
-import gsap from "gsap";
+/* import Lenis from "@studio-freight/lenis";
+import gsap from "gsap"; */
 
 
 export default function Home({ blogs }: { blogs: FrontMatter[] }) {

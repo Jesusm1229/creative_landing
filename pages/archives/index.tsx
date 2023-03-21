@@ -2,22 +2,22 @@ import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
     FadeContainer,
-    popUp,
+
     popUpFromBottomForText,
-    searchBarSlideAnimation,
+    /*  searchBarSlideAnimation, */
 } from "@content/FramerMotionVariants";
-import Link from "next/link";
+/* import Link from "next/link"; */
 import Blog from "@components/Blog";
 import Metadata from "@components/MetaData";
-import { BiRss } from "react-icons/bi";
+/* import { BiRss } from "react-icons/bi";
 import { RiCloseCircleLine } from "react-icons/ri";
-import { BsBookmark } from "react-icons/bs";
+import { BsBookmark } from "react-icons/bs"; */
 import AnimatedDiv from "@components/FramerMotion/AnimatedDiv";
 /* import PageTop from "@components/PageTop"; */
 import MDXContent from "@lib/MDXContent";
 import pageMeta from "@content/meta";
 import { FrontMatter } from "@lib/types";
-import { CgSearch } from "react-icons/cg";
+/* import { CgSearch } from "react-icons/cg"; */
 
 export default function Blogs({ blogs }: { blogs: FrontMatter[] }) {
     const [searchValue, setSearchValue] = useState("");

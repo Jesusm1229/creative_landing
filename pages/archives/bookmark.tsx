@@ -3,7 +3,7 @@ import { FadeContainer } from "@content/FramerMotionVariants";
 import Blog from "@components/Blog";
 import Metadata from "@components/MetaData";
 import AnimatedDiv from "@components/FramerMotion/AnimatedDiv";
-import PageTop from "@components/PageTop";
+
 import useBookmarkBlogs from "@hooks/useBookmarkBlogs";
 import pageMeta from "@content/meta";
 
@@ -20,9 +20,9 @@ export default function Blogs() {
       />
 
       <section className="flex flex-col gap-2 pageTop text-neutral-900 dark:text-neutral-200">
-        <PageTop pageTitle="Bookmarks">
+        {/*   <PageTop pageTitle="Bookmarks">
           Here you can find article bookmarked by you for Later use.
-        </PageTop>
+        </PageTop> */}
 
         <section className="relative py-5 px-2 flex flex-col gap-2 min-h-[50vh]">
           <AnimatePresence>
@@ -32,7 +32,7 @@ export default function Blogs() {
                 className="grid grid-cols-1 gap-4 mx-auto"
               >
                 {bookmarkedBlogs?.map((blog, index) => {
-                  return <Blog key={index} blog={blog} />;
+                  return <Blog key={index} blog={blog} colSpan="col-span-1" />;
                 })}
               </AnimatedDiv>
             ) : (

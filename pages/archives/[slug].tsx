@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import BlogLayout from "@layout/BlogLayout";
 import Metadata from "@components/MetaData";
 import MDXComponents from "@components/MDXComponents";
