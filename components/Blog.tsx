@@ -39,7 +39,6 @@ export default function Blog({
             x: leftX - rect.width / 2,
             y: topY - rect.height / 2,
         };
-        const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
 
 
         x.set(event.clientX - rect.left);
@@ -57,7 +56,7 @@ export default function Blog({
         `;
     }
 
-    const removeListener = (e: any) => {
+    const removeListener = () => {
         if (glowRef.current != null) {
             glowRef.current.style.transform = '';
             glowRef.current.style.background = '';
