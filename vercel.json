@@ -117,15 +117,15 @@
     },
     {
       "source": "/newsletter",
-      "destination": "https://j471n.substack.com/"
+      "destination": "https://"
     },
     {
       "source": "/cv",
-      "destination": "https://read.cv/j471n"
+      "destination": "https:"
     },
     {
       "source": "/social",
-      "destination": "https://linktr.ee/j471n"
+      "destination": "https://l"
     }
   ]
 }

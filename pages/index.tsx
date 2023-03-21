@@ -69,7 +69,7 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                         </div>
 
                         {/*     <Link
-                            href="https://bit.ly/j471nCV"
+                            href="https://bit.ly/valentinaCV"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-5 py-2 transition-transform border border-gray-500 rounded-md outline-none select-none dark:border-gray-400 hover:bg-white dark:hover:bg-neutral-800 active:scale-95"
@@ -111,10 +111,10 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                 </div>
 
                 <div className="w-full py-4">
-                    <Marquee />
+                    <Marquee direction={true} />
                 </div>
                 <div className="w-[110%] rotate-2 bg-[color:var(--color-text-alt)] text-white -mt-12 py-4">
-                    <Marquee />
+                    <Marquee direction={false} />
                 </div>
 
 

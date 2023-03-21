@@ -68,7 +68,7 @@ export default function BlogLayout({
             />
             <div className="flex flex-col w-full text-xs sm:text-sm sm:flex-row sm:justify-between">
               <p className="flex items-center gap-2 font-medium !my-0">
-                <span>Jatin Sharma</span>
+                <span>Valentina Charlotte</span>
                 <span>•</span>
                 <span>{getFormattedDate(new Date(post.meta.date))}</span>
               </p>
@@ -83,7 +83,7 @@ export default function BlogLayout({
 
           <div className="flex gap-2 ml-4">
             <Link
-              href={`https://github.com/j471n/j471n.in/edit/main/posts/${post.meta.slug}.mdx`}
+              href={`https://github.com/valentina/valentina.in/edit/main/posts/${post.meta.slug}.mdx`}
               title="Edit on Github"
               target="_blank"
               rel="noopener noreferrer"
