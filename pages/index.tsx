@@ -10,7 +10,7 @@ import {
 import { motion } from "framer-motion";
 import pageMeta from "@content/meta";
 import generateSitemap from "@lib/sitemap";
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 
 import AnimatedHeading from "@components/FramerMotion/AnimatedHeading";
@@ -21,8 +21,15 @@ import MDXContent from "@lib/MDXContent";
 import BlogSection from "@components/Home/BlogSection";
 import ServiceSection from "@components/Home/ServiceSection";
 import Marquee from "@components/Marquee";
+import Lenis from "@studio-freight/lenis";
+import gsap from "gsap";
+
 
 export default function Home({ blogs }: { blogs: FrontMatter[] }) {
+
+
+
+
 
 
     return (
@@ -80,8 +87,8 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                     </div>
                 </motion.section>
 
-                <section className="absolute inset-0 w-full -z-10 h-fit  columns-2 md:columns-3 lg:columns-4 mx-auto overflow-clip">
-                    <img className="mb-4" src="https://source.unsplash.com/random/1" />
+                <section className=" absolute inset-0 w-full -z-10 h-fit  columns-2 md:columns-3 lg:columns-4 mx-auto overflow-clip">
+                    <img className="column__item mb-4" src="https://source.unsplash.com/random/1" />
                     <img className="mb-4" src="https://source.unsplash.com/random/2" />
                     <img className="mb-4" src="https://source.unsplash.com/random/3" />
                     <img className="mb-4" src="https://source.unsplash.com/random/4" />
@@ -161,6 +168,7 @@ export async function getStaticProps() {
         props: { blogs },
     };
 }
+
 
 
 
