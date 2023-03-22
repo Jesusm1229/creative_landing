@@ -114,18 +114,6 @@
     {
       "source": "/sitemap",
       "destination": "/sitemap.xml"
-    },
-    {
-      "source": "/newsletter",
-      "destination": "https://"
-    },
-    {
-      "source": "/cv",
-      "destination": "https:"
-    },
-    {
-      "source": "/social",
-      "destination": "https://l"
     }
   ]
 }

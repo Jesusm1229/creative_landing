@@ -109,8 +109,8 @@ export default function ServiceSection() {
             </div>
             <div className="hidden md:block relative w-full h-full gap-4 mx-auto my-2">
                 <div className="relative w-full h-full flex flex-col items-center justify-center gap-1 mx-auto">
-                    <img className=" absolute w-[50%] object-cover h-[50%] inset-0 mx-auto mt-[40%]" src="https://source.unsplash.com/random/5" />
-                    <img className=" absolute w-[50%] object-cover h-[50%] mt-20 inset-0" src="https://source.unsplash.com/random/3" />
+                    <img className=" absolute w-[50%] object-cover h-[50%] inset-0 mx-auto mt-[40%]" src="https://source.unsplash.com/random/5" alt='image' />
+                    <img className=" absolute w-[50%] object-cover h-[50%] mt-20 inset-0" src="https://source.unsplash.com/random/3" alt='image2' />
                 </div>
             </div>
         </motion.section>
