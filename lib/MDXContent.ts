@@ -12,15 +12,16 @@ import { FrontMatter } from "./types";
 export default class MDXContent {
   private POST_PATH: string;
   constructor(folderName: string) {
-    this.POST_PATH = path.join(process.cwd().replace(/\\/g, "/"), folderName);
-    /* this.POST_PATH = path.join(process.cwd(), folderName); */
+   /*  this.POST_PATH = path.join(process.cwd().replace(/\\/g, "/"), folderName); */
+    this.POST_PATH = path.join(process.cwd(), folderName);
   }
 
   getSlugs() {
-    const paths = globSync(`${this.POST_PATH}/*.mdx`.replace(/\\/g, "/"));
-    /*   const paths = globSync(`${this.POST_PATH}/*.mdx`); */
+    /* const paths = globSync(`${this.POST_PATH}/*.mdx`.replace(/\\/g, "/")); */
+      const paths = globSync(`${this.POST_PATH}/*.mdx`);
     return paths.map((path) => {
-      const parts = path.split("\\");
+      /* const parts = path.split("\\"); */
+       const parts = path.split("/");
       const fileName = parts[parts.length - 1];
       const [slug, _ext] = fileName.split(".");
       return slug;
