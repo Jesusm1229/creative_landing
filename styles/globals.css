@@ -326,6 +326,44 @@ code > .line::before {
   background-position: 0 100%;
 }
 
+.box {
+  background: linear-gradient(
+    45deg,
+    #fcfbeb 10%,
+    transparent 10%,
+    transparent 50%,
+    #fcfbeb 50%,
+    #fcfbeb 60%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 15px 15px;
+  box-shadow: 0 0 0 10px #f20e0e, 0 0 0 14px #fcfbeb;
+  animation: animate 1s linear infinite;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  background: var(--color-text-alt);
+}
+.box::after {
+  content: "";
+  position: absolute;
+  inset: 30px;
+  border: 3px dashed #fcfbeb;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 15px;
+  }
+}
+
 /*SÓLO MDX*/
 /* Layers Components or the custom class extends with tailwind */
 @layer components {

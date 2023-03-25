@@ -26,7 +26,7 @@ export default function Marquee({ direction }: { direction: boolean }) {
 
         )
             : (
-                <div className="text-5xl md:text-9xl uppercase relative flex overflow-x-hidden">
+                <div className="text-5xl md:text-9xl uppercase relative flex overflow-hidden ">
                     <div className=" animate-marquee3 whitespace-nowrap">
                         <span className=" mx-4">Available Worlwide 	•</span>
                         <span className=" mx-4">Available Worlwide 	•</span>

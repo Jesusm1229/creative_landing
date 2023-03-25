@@ -107,10 +107,10 @@ export default function ServiceSection() {
 
 
             </div>
-            <div className="hidden md:block relative w-full h-full gap-4 mx-auto my-2">
-                <div className="relative w-full h-full flex flex-col items-center justify-center gap-1 mx-auto">
-                    <img className=" absolute w-[50%] object-cover h-[50%] inset-0 mx-auto mt-[40%]" src="https://source.unsplash.com/random/5" alt='image' />
-                    <img className=" absolute w-[50%] object-cover h-[50%] mt-20 inset-0" src="https://source.unsplash.com/random/3" alt='image2' />
+            <div className="hidden md:block relative w-[65%] h-[75%]  m-auto ">
+                <div className="box z-10 relative w-full h-full flex flex-col items-center justify-center gap-1 m-auto">
+                    <img className=" absolute w-[70%] object-cover h-[80%] inset-0 m-auto " src="https://source.unsplash.com/random/5" alt='image' />
+                    {/* <img className=" absolute w-[50%] object-cover h-[50%] mt-20 inset-0" src="https://source.unsplash.com/random/3" alt='image2' /> */}
                 </div>
             </div>
         </motion.section>

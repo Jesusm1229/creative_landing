@@ -7,10 +7,10 @@ import {
     opacityVariant,
 
 } from "@content/FramerMotionVariants";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import pageMeta from "@content/meta";
 import generateSitemap from "@lib/sitemap";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 /* import Link from "next/link"; */
 
 import AnimatedHeading from "@components/FramerMotion/AnimatedHeading";
@@ -21,11 +21,75 @@ import MDXContent from "@lib/MDXContent";
 import BlogSection from "@components/Home/BlogSection";
 import ServiceSection from "@components/Home/ServiceSection";
 import Marquee from "@components/Marquee";
-/* import Lenis from "@studio-freight/lenis";
-import gsap from "gsap"; */
+
+
+import { useTransform } from 'framer-motion';
+
 
 
 export default function Home({ blogs }: { blogs: FrontMatter[] }) {
+
+    const carouselRef = useRef(null)
+    const { scrollX } = useScroll({
+        container: carouselRef
+    })
+
+    const { scrollYProgress } = useScroll();
+    const progress = useTransform(scrollYProgress, [0, 1], [0, 1]);
+    /* // Lenis smooth scrolling
+    let lenis: useLenis();
+
+    // Initialize Lenis smooth scrolling
+    const initSmoothScrolling = () => {
+        lenis = new Lenis({
+            lerp: 0.2,
+            smooth: true,
+        });
+        const scrollFn = (time: any) => {
+            lenis.raf(time);
+            requestAnimationFrame(scrollFn);
+        };
+        requestAnimationFrame(scrollFn);
+    };
+
+    // GSAP Scroll Triggers
+    const scroll = () => {
+        gsap.timeline({
+            scrollTrigger: {
+                start: 0,
+                end: 'max',
+                scrub: true
+            }
+        })
+            .addLabel('start', 0)
+            .to('.section--columns', {
+                ease: 'none',
+                startAt: { scale: 1.1 },
+                scale: 1,
+            }, 'start')
+            .to('.section--columns', {
+                scrollTrigger: {
+                    trigger: '.section--showcase',
+                    start: 0,
+                    end: 'top top',
+                    scrub: true
+                },
+                ease: 'power4.inOut',
+                startAt: {
+                    opacity: 0.2,
+                },
+                opacity: 1,
+                // repeat once (go back to "startAt" values)
+                yoyo: true,
+                repeat: 1
+            }, 'start')
+            .to('.section--columns .column-wrap', {
+                ease: 'none',
+                yPercent: pos => pos % 2 ? 3 : -3
+            }, 'start')
+    };
+ */
+
 
 
     return (
@@ -74,211 +138,227 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                 </motion.section>
 
 
-                <section className="relative overflow-hidden  md:h-screen ">
-                    <div className=" w-full overflow-hidden md:h-full grid grid-cols-4 gap-4">
-                        <div className="column-1">
-                            <div className="relative block overflow-clip bg-gray-100  h-32 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/1"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-64 mb-4">
+                <motion.section className="section section--columns relative overflow-hidden  md:h-full " ref={carouselRef} >
+                    <motion.div className=" columns w-full overflow-hidden md:h-full grid grid-cols-4 gap-4" >
+                        <motion.div className="column-wrap"
+                            style={{ y: useTransform(progress, [0, 1], [0, -60]) }}
+                        >
+                            <div className="column">
+                                <div className="column__item relative block overflow-clip bg-gray-100  h-32 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/1"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-64 mb-4">
 
-                                <Image
-                                    src="https://source.unsplash.com/random/2"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                    <Image
+                                        src="https://source.unsplash.com/random/2"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-48 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/3"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-24 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/4"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-40 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/5"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-56 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/6"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
                             </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-48 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/3"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                        </motion.div>
+                        <motion.div className="column-wrap" style={{
+                            y: useTransform(progress, [0, 1], [0, -30]),
+                        }}>
+                            <div className="column">
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-56 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/7"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-32 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/8"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-64 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/9"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 w-30 h-48 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/10"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-24 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/12"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-40 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/13"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
                             </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-24 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/4"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                        </motion.div>
+                        <motion.div className="column-wrap" style={{
+                            y: useTransform(progress, [0, 1], [0, -30]),
+                        }}>
+                            <div className="column">
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-40 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/14"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-56 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/15"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-32 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/16"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-64 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/17"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-48 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/18"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-24 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/19"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
                             </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-40 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/5"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                        </motion.div>
+                        <motion.div className="column-wrap" style={{
+                            y: useTransform(progress, [0, 1], [0, -30]),
+                        }}>
+                            <div className="column">
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-24 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/20"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-48 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/21"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-64 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/22"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-32 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/23"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-56 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/24"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
+                                <div className="column__item relative block overflow-clip bg-gray-100 h-40 mb-4">
+                                    <Image
+                                        src="https://source.unsplash.com/random/25"
+                                        alt=""
+                                        fill
+                                        quality={75}
+                                        className="column__item-img object-cover object-center brightness-75 lg:w-full  lg:object-center" />
+                                </div>
                             </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-56 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/6"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                        </div>
-                        <div className="column-2">
-                            <div className="relative block overflow-clip bg-gray-100 h-56 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/7"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-32 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/8"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-64 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/9"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 w-30 h-48 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/10"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-24 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/12"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-40 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/13"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                        </div>
-                        <div className="column-3">
-                            <div className="relative block overflow-clip bg-gray-100 h-40 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/14"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-56 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/15"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-32 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/16"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-64 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/17"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-48 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/18"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-24 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/19"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                        </div>
-                        <div className="column-4">
-                            <div className="relative block overflow-clip bg-gray-100 h-24 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/20"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-48 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/21"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-64 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/22"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-32 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/23"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-56 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/24"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                            <div className="relative block overflow-clip bg-gray-100 h-40 mb-4">
-                                <Image
-                                    src="https://source.unsplash.com/random/25"
-                                    alt=""
-                                    fill
-                                    quality={75}
-                                    className="object-cover object-center brightness-75 lg:w-full  lg:object-center" />
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                        </motion.div>
+                    </motion.div>
+                </motion.section>
 
                 {/* <section className=" absolute inset-0 w-full -z-10 h-fit  columns-2 md:columns-3 lg:columns-4 mx-auto overflow-clip">
                     <img className="column__item mb-4" src="https://source.unsplash.com/random/1" alt="" />
