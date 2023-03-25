@@ -29,13 +29,15 @@ import { useTransform } from 'framer-motion';
 
 export default function Home({ blogs }: { blogs: FrontMatter[] }) {
 
-    const carouselRef = useRef(null)
-    const { scrollX } = useScroll({
-        container: carouselRef
-    })
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["end end", "start start"]
+    });
 
-    const { scrollYProgress } = useScroll();
+
     const progress = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
     /* // Lenis smooth scrolling
     let lenis: useLenis();
 
@@ -138,10 +140,10 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                 </motion.section>
 
 
-                <motion.section className="section section--columns relative overflow-hidden  md:h-full " ref={carouselRef} >
+                <motion.section className="section section--columns relative overflow-hidden  md:h-full "  >
                     <motion.div className=" columns w-full overflow-hidden md:h-full grid grid-cols-4 gap-4" >
                         <motion.div className="column-wrap"
-                            style={{ y: useTransform(progress, [0, 1], [0, -60]) }}
+                            style={{ y: useTransform(progress, [0, 1], [0, -30]) }}
                         >
                             <div className="column">
                                 <div className="column__item relative block overflow-clip bg-gray-100  h-32 mb-4">
