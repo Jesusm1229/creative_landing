@@ -7,10 +7,10 @@ import {
     opacityVariant,
 
 } from "@content/FramerMotionVariants";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import pageMeta from "@content/meta";
 import generateSitemap from "@lib/sitemap";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 /* import Link from "next/link"; */
 
 import AnimatedHeading from "@components/FramerMotion/AnimatedHeading";
@@ -23,20 +23,8 @@ import ServiceSection from "@components/Home/ServiceSection";
 import Marquee from "@components/Marquee";
 
 
-import { useTransform } from 'framer-motion';
-
-
-
 export default function Home({ blogs }: { blogs: FrontMatter[] }) {
 
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["end end", "start start"]
-    });
-
-
-    const progress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
     /* // Lenis smooth scrolling
     let lenis: useLenis();
@@ -143,7 +131,7 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                 <motion.section className="section section--columns relative overflow-hidden  md:h-full "  >
                     <motion.div className=" columns w-full overflow-hidden md:h-full grid grid-cols-4 gap-4" >
                         <motion.div className="column-wrap"
-                            style={{ y: useTransform(progress, [0, 1], [0, -30]) }}
+
                         >
                             <div className="column">
                                 <div className="column__item relative block overflow-clip bg-gray-100  h-32 mb-4">
@@ -197,9 +185,7 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                                 </div>
                             </div>
                         </motion.div>
-                        <motion.div className="column-wrap" style={{
-                            y: useTransform(progress, [0, 1], [0, -30]),
-                        }}>
+                        <motion.div className="column-wrap" >
                             <div className="column">
                                 <div className="column__item relative block overflow-clip bg-gray-100 h-56 mb-4">
                                     <Image
@@ -251,9 +237,7 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                                 </div>
                             </div>
                         </motion.div>
-                        <motion.div className="column-wrap" style={{
-                            y: useTransform(progress, [0, 1], [0, -30]),
-                        }}>
+                        <motion.div className="column-wrap" >
                             <div className="column">
                                 <div className="column__item relative block overflow-clip bg-gray-100 h-40 mb-4">
                                     <Image
@@ -305,9 +289,7 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                                 </div>
                             </div>
                         </motion.div>
-                        <motion.div className="column-wrap" style={{
-                            y: useTransform(progress, [0, 1], [0, -30]),
-                        }}>
+                        <motion.div className="column-wrap" >
                             <div className="column">
                                 <div className="column__item relative block overflow-clip bg-gray-100 h-24 mb-4">
                                     <Image
