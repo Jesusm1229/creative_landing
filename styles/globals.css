@@ -79,6 +79,13 @@
   font-display: swap;
   src: url(/fonts/Kudryashev/fontspring-demo-kdp45.woff2) format("woff2");
 }
+@font-face {
+  font-family: "Bachelorette";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/fonts/Bachelorette.woff2) format("woff2");
+}
 
 sub,
 .sup {

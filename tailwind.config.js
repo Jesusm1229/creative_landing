@@ -12,6 +12,7 @@ module.exports = {
       kudryashev: ["Kudryashev", "sans-serif"],
       barlow: ["Barlow", "sans-serif"],
       mono: ["monospace"],
+      bachelorette: ["Bachelorette"],
     },
     extend: {
       colors: {

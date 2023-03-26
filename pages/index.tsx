@@ -104,10 +104,10 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
                             <div className="flex flex-col gap-1 text-[color:var(--color-text-alt)] ">
                                 <motion.h1
                                     variants={opacityVariant}
-                                    className="section__title text-5xl lg:text-12xl font-kudryashev text-[clamp(2rem,17vw,12.5rem)] leading-[0.9] normal-case mt-[5vh] mb-[6vh] mx-0;
+                                    className="section__title  text-5xl lg:text-12xl font-kudryashev text-[clamp(2rem,17vw,12.5rem)] leading-[0.9] normal-case mt-[5vh] mb-[6vh] mx-0;
                                     "
                                 >
-                                    Valentina<br /> LaRue
+                                    Valentina<br /> <span className="font-bachelorette mt-10 rotate-2  lg:text-9xl">Bea_uty </span>
                                 </motion.h1>
                                 <motion.p
                                     variants={opacityVariant}
@@ -129,8 +129,8 @@ export default function Home({ blogs }: { blogs: FrontMatter[] }) {
 
 
                 <motion.section className="section section--columns relative overflow-hidden  md:h-full "  >
-                    <motion.div className=" columns w-full overflow-hidden md:h-full grid grid-cols-4 gap-4" >
-                        <motion.div className="column-wrap"
+                    <motion.div className=" columns w-full overflow-hidden md:h-full grid grid-cols-3 md:grid-cols-4 gap-4" >
+                        <motion.div className="column-wrap hidden md:block"
 
                         >
                             <div className="column">
